@@ -208,6 +208,16 @@ margin: 20px;
 .bar-1 {width: 15%; height: 18px; background-color: #f44336;}
 
 
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 500px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+
 
 
 </style>
