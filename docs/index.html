@@ -23,7 +23,6 @@
 <meta property="og:description" content="Learn languages" />
 
 
-
 <style>
 * {
   box-sizing: border-box;
@@ -143,6 +142,73 @@ td, th, tr, p {
 }
 
 
+.subcir {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #fff;
+  line-height: 90px;
+  text-align: center;
+  background: darkblue;
+  border: 2px solid white;
+  margin: auto;
+  margin-top: 8px;
+}
+
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+
+.row {
+//padding: 20px;
+margin: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #4CAF50;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+
+
 
 </style>
 </head>
@@ -166,6 +232,32 @@ td, th, tr, p {
 <br>
 تعلم اللغات
 </h2>
+
+
+
+
+	<table style="width:100%">
+	<tr>
+    <th>
+		<div class="subcir">
+		<p align="center" style="margin: 0;" id="years">ممتع</p>
+		</div>
+	</th>
+    <th>
+		<div class="subcir">
+		<p align="center" style="margin: 0;" id="months">بسيط</p>
+		</div>
+	</th>
+    <th>
+		<div class="subcir">
+		<p align="center" style="margin: 0;" id="days">سهل</p>
+		</div>
+	</th>
+	</tr>
+	</table>
+
+
+<br>
 
 
 <p dir="rtl" style="padding: 10px;" align="justify">
@@ -479,7 +571,77 @@ D
 <br><br>
 </p>
 
-<hr>
+
+
+	
+
+<br>
+<hr style="border:3px solid #f1f1f1">
+<br>
+
+<p style="padding: 5px;margin: 5px" dir="rtl">تقييم المستخدمين</p>
+<p style="padding: 5px;margin: 5px" dir="rtl">المعدل ٤,١ بناءاً على ١٠٠٠ تقييم.</p>
+<div class="row">
+  <div class="side">
+    <div>٥ نجوم</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>150</div>
+  </div>
+  <div class="side">
+    <div>٤ نجوم</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>63</div>
+  </div>
+  <div class="side">
+    <div>٣ نجوم</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>15</div>
+  </div>
+  <div class="side">
+    <div>نجمتين</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>6</div>
+  </div>
+  <div class="side">
+    <div>نجمة</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>20</div>
+  </div>
+</div>
+
+
+<br>
+
 
 
 <div class="main">
@@ -488,7 +650,10 @@ D
 <a class="tablink" href="about.html">من نحن</a>
 </div>
 
-		
+	
+
+
+
 </div>
 
 
