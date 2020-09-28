@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>SpeekAboo</title>
+
+
+<link rel="icon" 
+      type="image/png" 
+      href="https://fijjla.com/Favicon.ico">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:image" content="https://fijjla.com/img/fbshare2.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image" content="https://fijjla.com/img/wpshare.png" />
+<meta property="og:image:width" content="300" />
+<meta property="og:image:height" content="300" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="SpeekAboo" />
+<meta property="og:description" content="Learn languages" />
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 8px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+/*end of welcome ads*/
+.mainframe {
+  max-width: 500px;
+  margin: auto;
+  background-color: #002060;
+  color: white;
+  margin-top : 60px;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px ;
+  margin: auto;
+  font-size: 24px;
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.link1 {
+  display: block;
+  //padding: 14px 28px;
+  background-color: black;
+  color: white;
+  //float: right;
+  //border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px ;
+  margin: auto;
+  font-size: 20px;
+  width: 45%;
+  text-align: center;
+  text-decoration: none;
+  //border: 4px solid green;
+  border-radius: 15px;
+  
+  
+}
+
+
+table {
+  padding: 2px;
+}
+
+td, th, tr, p {
+  
+  padding: 0px;
+  margin: 2px;
+  
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: right;
+  outline: none;
+  font-size: 24px;
+  border: 8px solid #002060;
+  border-radius: 20px;
+  
+}
+
+.active, .collapsible:hover {
+  background-color: green;
+  border-radius: 20px;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: left;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.contentxy {
+  //padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #002044;
+  width: 92%;
+  //border: 2px solid white;
+  margin: auto;
+  //margin-top: -16px;
+  //padding-top: -16px;
+  border-radius: 20px;
+}
+
+
+
+.contentimg {
+  background-color: #002044;
+  width: 98%;
+  margin: auto;
+}
+
+
+.subcir {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #fff;
+  line-height: 90px;
+  text-align: center;
+  background: #002044;
+  //border: 2px solid #002044;
+  margin: auto;
+  margin-top: 8px;
+}
+
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+
+.row {
+//padding: 20px;
+margin: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 72%; height: 18px; background-color: #4CAF50;}
+.bar-4 {width: 14.6%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 9.4%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 1.5%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 2.5%; height: 18px; background-color: #f44336;}
+
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 500px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+
+
+.topright {
+  float: right;
+  text-decoration: none;
+  background-color: #002044;
+  //border: 3px solid gray;
+  border-radius: 5px;
+  color: #fff;
+  //padding-right: 10px;
+  //padding-left: 10px;
+  padding: 10px;
+  height: 50px;
+  font-size: 24px;
+  margin-top: -50px;
+  
+}
+
+.topleft {
+  float: left;
+  text-decoration: none;
+  background-color: #DA016A;
+  //border: 3px solid gray;
+  border-radius: 5px;
+  color: #fff;
+  //padding-right: 10px;
+  //padding-left: 10px;
+  padding: 10px;
+  height: 50px;
+  font-size: 24px;
+  width: 100%;
+}
+
+
+.subrec {
+  max-width: 80%;
+  margin: auto;
+  border-radius: 25px;
+  border: 2px solid white;
+}
+
+</style>
+</head>
+<body >
+
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+
+<span class="topleft">SpeekAboo</span>
+<a class="topright" href="index.html">
+الرئيسية
+&#127968;
+</a>
+
+
+</div>
+
+
+ <!-- calculator here --> 
+<div class="mainframe">
+
+<h2 align="center">
+<br>
+الوقت
+</h2>
+
+<p dir="rtl" style="padding: 30px;" align="justify">
+تعلم كتابة وقراءة الوقت بطريقة بسيطة وسهله للغاية
+<br>
+</p>
+
+
+
+<!-- table start here -->
+
+
+<button class="collapsible" style="background-color: red;" >
+تعليمات تفعيل الصوت
+&#128266;
+</button>
+<div class="contentxy">
+
+<p dir="rtl" style="padding: 10px;" align="justify">
+
+١- تأكد من أن هاتفك غير صامت
+<br>
+٢- إذا وصلت إلى موقعنا من خلال فيسبوك، فأنت تستخدم متصفح التطبيق وليس متصفح الجوال الرئيسي. لذلك يجب عليك فتح الرابط الخاص بنا مباشرة من المتصفح الرئيسي على هاتفك. لأن متصفح التطبيق لا يدعم ميزة الصوت
+<br>
+٣- أو ببساطة شارك رابطنا مع صديقك على الواتساب ، ثم اضغط على الرابط. سيفتح واتساب رابطنا في متصفح الهاتف الرئيسي
+<br><br>
+ملاحظة: المشكلة ليست في الرابط. إنه فقط  متصفح التطبيق لا يدعم جميع الميزات مثل المتصفح الرئيسي في هاتفك
+</p>
+</div>
+
+
+ <!-- calculator here --> 
+
+
+
+	
+	
+	<h2 align="center" style="padding-top: 10px;" id="txt1">اختر الوقت</h2>
+	<p align="center" style="padding-top: 0px;margin: 0;">
+	<input type="time" name="dateofbirth" id="dateofbirth" onchange="handler(event);" >
+	</p>
+
+	<hr>
+	
+	
+	<h2 align="center" style="margin: 0;" id="txt3">الوقت كأرقام</h2>
+	<div class="subrec">
+		<h2 align="center" style="margin: 4px;" id="today">-- -- --</h2>
+	</div>
+	<br>
+	<h2 align="center" style="margin: 0;" id="txt4">الوقت كتابتاً</h2>
+	<div class="subrec">
+		<h2 align="center" style="margin: 4px;" id="yourbd">-- -- --</h2>
+	</div>
+		
+
+	
+	<br>
+	
+	
+	<div class="contentimg">
+	<img src="img/clock.png" alt="FIJJLA" style="width:100%">
+	</div>
+	
+	<br>
+	
+	<p align="center" style="padding: 10px;margin: 10px;">
+
+	
+	<span style="color: yellow;"><b>
+	مثال<br>
+من الساعة 2 إلى الساعة 3</b></span>
+	
+	</p>
+	<div class="contentimg">
+	<img src="img/clock1.png" alt="FIJJLA" style="width:100%">
+	</div>
+	
+	<p dir="rtl" style="padding: 10px;">
+<br><span style="color: yellow;"><b>
+عندما تكون الدقائق تساوي صفر نقول:
+</b></span>
+<br>It's (hours) o'clock 
+<br>مثلا:
+<br>2:00 = it's 2 o'clock
+<br>3:00 = it's 3 o'clock
+<br><br>
+<br><span style="color: yellow;"><b>
+عندما تكون الدقائق اكبر من صفر و اصغر من ١٥ نقول:
+</b></span>
+<br> It's (minutes) past (hours)
+<br>مثلا:
+<br> 2:05 = it's 5 past 2
+<br> 2:10 = it's 10 past 2
+<br><br>
+<br><span style="color: yellow;"><b>
+عندما تكون الدقائق تساوي ١٥ نقول:
+</b></span>
+<br>It's quarter past (hours)
+<br>مثلا:
+<br>2:15 = it's quarter past 2
+<br>3:15 = it's quarter past 3
+<br><br>
+<br><span style="color: yellow;"><b>
+عندما تكون الدقائق اكبر من ١٥ و اصغر من ٣٠ نقول:
+</b></span>
+<br> It's (minutes) past (hours)
+<br>مثلا:
+<br> 2:20 = it's 20 past 2
+<br> 2:25 = it's 25 past 2
+<br><br>
+<br><span style="color: yellow;"><b>
+عندما تكون الدقائق تساوي ٣٠ نقول:
+</b></span>
+<br>It's half past (hours)
+<br>مثلا:
+<br>2:30 = its half past 2
+<br>3:30 = its half past 3
+<br><br>
+<br><span style="color: yellow;"><b>
+عندما تكون الدقائق اكبر من ٣٠ نضيف ١ على عدد الساعات و نطرح الدقائق من ٦٠
+</b></span>
+<br><br>
+<br><span style="color: yellow;"><b>
+عندما تكون الدقائق اكبر من ٣٠ و اصغر من ٤٥ نقول:
+</b></span>
+<br> It's (60-minutes) to (hours +1)
+<br>مثلا:
+<br> 2:35 = it's 25 to 3
+<br>2:40 = it's 20 to 3
+<br><br>
+<br><span style="color: yellow;"><b>
+عندما تكون الدقائق تساوي ٤٥ نقول:
+</b></span>
+<br>It's quarter to (hours +1)
+<br>مثلا:
+<br>2:45 = it's quarter to 3
+<br>3:45 = it's quarter to 4
+<br><br>
+<br><span style="color: yellow;"><b>
+عندما تكون الدقائق اكبر من ٤٥ و اصغر من ٦٠ نقول:
+</b></span>
+<br> It's (60-minutes) to (hours +1)
+<br>مثلا:
+<br> 02:50 = it's 10 to 3
+<br>02:55 = it's 5 to 3
+<br>
+<br>
+<br>
+<br>
+
+	
+	
+	
+	</p>
+	
+ <!-- calculator here --> 
+ 
+
+
+<!-- table end here -->
+
+
+<span style="color: yellow;"><b>
+xx
+</b></span>
+
+
+
+
+
+
+<h2 dir="rtl" style="padding: 10px;" align="justify">
+<span style="color: yellow;"><b>
+اضغط على زر الإعجاب للاشتراك
+</b></span>
+</h2>
+
+ 
+ <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0" nonce="Pu2cWjr6"></script>
+
+  <div  align="center" class="fb-page" data-href="https://www.facebook.com/Fijjlacom-107975257611185/" data-tabs="" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+	  <blockquote cite="https://www.facebook.com/Fijjlacom-107975257611185/" class="fb-xfbml-parse-ignore">
+		<a href="https://www.facebook.com/Fijjlacom-107975257611185/">Fijjla.com</a>
+	  </blockquote>
+  </div>
+ 
+
+<!-- table end here -->
+
+
+</div>
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+
+function say(m) {
+
+
+  var msg = new SpeechSynthesisUtterance();
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[4];
+  msg.voiceURI = "native";
+  msg.volume = 1;
+  msg.rate = 0.7;
+  msg.pitch = 1;
+  msg.text = m;
+  msg.lang = 'en-US';
+  speechSynthesis.speak(msg);
+  
+}
+
+function handler(e){
+
+	
+	var time = e.target.value;
+	var hours = time.split(":")[0];
+    var minutes = time.split(":")[1];
+	var text = '';
+	
+	hours = Number(hours);
+	minutes = Number(minutes);
+	
+	if (hours >=12)
+	{
+		hours = hours - 12;
+	}
+	
+	if(hours ==0)
+	{
+		hours = 12;
+	}
+	
+	if(hours == 12 & minutes == 0)
+	{
+		text = "it's 12 o'clock";
+	}
+	else if(hours != 0 & minutes == 0)
+	{
+		text = "it's "+ hours.toString() +" o'clock";
+	}
+	else if ((minutes < 15 & minutes > 0) | (minutes < 30 & minutes > 15) )
+	{
+		text = "it's " + minutes.toString() + " past " + hours.toString();
+	}
+	else if (minutes == 15 )
+	{
+		text = "it's quarter past "  + hours.toString();
+	}
+	else if (minutes == 30 )
+	{
+		text = "it's half past "  + hours.toString();
+	}
+	else if (minutes == 45 )
+	{
+		hours = hours + 1;
+		if (hours == 13)
+		{
+			hours = 1;
+		}
+		text = "it's quarter to "  + hours.toString();
+	}
+	else if ((minutes > 30 & minutes < 45) | (minutes > 45 & minutes <= 59) )
+	{
+		hours = hours + 1;
+		if (hours == 13)
+		{
+			hours = 1;
+		}
+		text = "it's " + (60 - minutes).toString() + " to " + hours.toString();
+	}
+	
+	
+	document.getElementById("yourbd").innerHTML = text;
+	document.getElementById("today").innerHTML = e.target.value;
+	say(text);
+			
+}
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
