@@ -1,0 +1,4878 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>SpeekAboo</title>
+
+
+<link rel="icon" 
+      type="image/png" 
+      href="https://fijjla.com/Favicon.ico">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:image" content="https://fijjla.com/img/fbshare2.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image" content="https://fijjla.com/img/wpshare.png" />
+<meta property="og:image:width" content="300" />
+<meta property="og:image:height" content="300" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="SpeekAboo" />
+<meta property="og:description" content="Learn languages" />
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 8px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+/*end of welcome ads*/
+.mainframe {
+  max-width: 500px;
+  margin: auto;
+  background-color: #002060;
+  color: white;
+  margin-top : 60px;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px ;
+  margin: auto;
+  font-size: 24px;
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.link1 {
+  display: block;
+  //padding: 14px 28px;
+  background-color: black;
+  color: white;
+  //float: right;
+  //border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px ;
+  margin: auto;
+  font-size: 20px;
+  width: 45%;
+  text-align: center;
+  text-decoration: none;
+  //border: 4px solid green;
+  border-radius: 15px;
+  
+  
+}
+
+
+table {
+  padding: 2px;
+}
+
+td, th, tr, p {
+  
+  padding: 0px;
+  margin: 2px;
+  
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: right;
+  outline: none;
+  font-size: 24px;
+  border: 8px solid #002060;
+  border-radius: 20px;
+  
+}
+
+.active, .collapsible:hover {
+  background-color: green;
+  border-radius: 20px;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: left;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.contentxy {
+  //padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #002044;
+  width: 92%;
+  //border: 2px solid white;
+  margin: auto;
+  //margin-top: -16px;
+  //padding-top: -16px;
+  border-radius: 20px;
+}
+
+
+.subcir {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #fff;
+  line-height: 90px;
+  text-align: center;
+  background: #002044;
+  //border: 2px solid #002044;
+  margin: auto;
+  margin-top: 8px;
+}
+
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+
+.row {
+//padding: 20px;
+margin: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 72%; height: 18px; background-color: #4CAF50;}
+.bar-4 {width: 14.6%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 9.4%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 1.5%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 2.5%; height: 18px; background-color: #f44336;}
+
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 500px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+
+
+.topright {
+  float: right;
+  text-decoration: none;
+  background-color: #002044;
+  //border: 3px solid gray;
+  border-radius: 5px;
+  color: #fff;
+  //padding-right: 10px;
+  //padding-left: 10px;
+  padding: 10px;
+  height: 50px;
+  font-size: 24px;
+  margin-top: -50px;
+  
+}
+
+.topleft {
+  float: left;
+  text-decoration: none;
+  background-color: #DA016A;
+  //border: 3px solid gray;
+  border-radius: 5px;
+  color: #fff;
+  //padding-right: 10px;
+  //padding-left: 10px;
+  padding: 10px;
+  height: 50px;
+  font-size: 24px;
+  width: 100%;
+}
+
+
+</style>
+</head>
+<body >
+
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+
+<span class="topleft">SpeekAboo</span>
+<a class="topright" href="index.html">
+الرئيسية
+&#127968;
+</a>
+
+
+</div>
+
+
+ <!-- calculator here --> 
+<div class="mainframe">
+
+<h2 align="center">
+<br>
+حفظ الكلمات
+</h2>
+
+<p dir="rtl" style="padding: 30px;" align="justify">
+طريقة جديدة لحفظ الكلمات عن طريق اختيار كلمات متشابهة لها نفس التهجئة أو أحرف مشتركة. 
+<br>
+</p>
+
+
+
+<!-- table start here -->
+
+
+<button class="collapsible" style="background-color: red;" >
+تعليمات تفعيل الصوت
+&#128266;
+</button>
+<div class="contentxy">
+
+<p dir="rtl" style="padding: 10px;" align="justify">
+
+١- تأكد من أن هاتفك غير صامت
+<br>
+٢- إذا وصلت إلى موقعنا من خلال فيسبوك، فأنت تستخدم متصفح التطبيق وليس متصفح الجوال الرئيسي. لذلك يجب عليك فتح الرابط الخاص بنا مباشرة من المتصفح الرئيسي على هاتفك. لأن متصفح التطبيق لا يدعم ميزة الصوت
+<br>
+٣- أو ببساطة شارك رابطنا مع صديقك على الواتساب ، ثم اضغط على الرابط. سيفتح واتساب رابطنا في متصفح الهاتف الرئيسي
+<br><br>
+ملاحظة: المشكلة ليست في الرابط. إنه فقط  متصفح التطبيق لا يدعم جميع الميزات مثل المتصفح الرئيسي في هاتفك
+</p>
+</div>
+
+
+<button class="collapsible">1</button>
+<div class="contentxy">
+
+<table style="width:100%">
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>1</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>One</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>واحد</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>won</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>فاز</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;'>
+  <td  nowrap rowspan=3 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>2</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Two</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>اثنان</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>to</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>إلى</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>too</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>جدا</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>3</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Four</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>أربعة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>for</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>إلى عن على</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>4</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Eight</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>ثمانية</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>ate</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>أكلت</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>5</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Steak</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>شريحة لحم</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>stake</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>حصة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>6</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Bean</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>فاصوليا</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>been</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>ايضا</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>7</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Pear</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>إجاص</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>pair</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>زوج</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>8</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Bread</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>خبز</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>bred</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>تربية الماشية</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>9</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Cereal</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>حبوب</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>serial</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>مسلسل</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>10</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Flour</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>طحين</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>flower</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>زهرة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>11</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Meat</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>لحم</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:22;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>meet</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>يجتمع</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:23;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>12</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span class=SpellE><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Chilli</span></span><span style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الفلفل</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:24;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>chilly</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>حار</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:25;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>13</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Mussel</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>بلح البحر</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:26;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>muscle</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>عضلة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:27;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>14</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Wine</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>نبيذ</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:28;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>whine</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>أنين</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:29;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>15</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Bite</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>عضة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:30;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>byte</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>وحدة قياس المعلومات الرقمية</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:31;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>16</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Grate</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>صر</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:32;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>great</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>عظيم</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:33;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>17</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Berry</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>توت</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:34;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>bury</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>دفن</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:35;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>18</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Currant</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>زبيب</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:36;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>current</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>تيار</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:37;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>19</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Leek</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>شخص عادي</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:38;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>leak</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>تسرب</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:39;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>20</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Maize</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الذرة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:40;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>maze</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>متاهة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:41;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>21</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Thyme</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>زعتر</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:42;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>time</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>زمن</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:43;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>22</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Sauce</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>صلصة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:44;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>source</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>مصدر</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:45;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>23</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Sweet</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>حلو</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:46;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>suite</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>جناح</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:47;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>24</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Mousse</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>طعام بارد خفيف مصنوع من البيض الممزوج بالكريمة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:white;
+  '></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:48;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>moose</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>غزال أمريكي ضخم</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:49;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>25</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Hare</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>أرنبة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:50;mso-yfti-lastrow:yes;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>hair</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>شعر</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<button class="collapsible">1</button>
+<div class="contentxy">
+
+<table style="width:100%">
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>26</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Bear</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>يتحمل</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>bare</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>عارية</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>27</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Deer</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الغزال</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>dear</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>العزيز</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>28</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Gorilla</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>غوريلا</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>guerrilla</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>حرب العصابات</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>29</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Sole</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>باطن القدم</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>soul</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الروح</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>30</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Flea</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>برغوث</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>flee</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الفرار</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>31</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Boar</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>خنزير</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>bore</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>تجويف</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>32</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Horse</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>حصان</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>hoarse</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>أجش الصوت</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>33</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Lynx</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>حيوان الوشق</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>links</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الروابط</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>34</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Whale</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>حوت</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>wail</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>عويل</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>35</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Mare</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>فرس</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>mayor</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>عمدة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20;'>
+  <td  nowrap rowspan=3 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>36</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Toad</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>العلجوم</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>towed</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>سحب</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:22;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>toed</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>اصبع القدم</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:23;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>37</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>I</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>أنا</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:24;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>eye</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>عين</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:25;'>
+  <td  nowrap rowspan=3 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>38</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>I’ll</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>سوف</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:26;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>isle</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>جزيرة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:27;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>aisle</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>ممر</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:28;'>
+  <td  nowrap rowspan=3 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>39</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>You</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>أنت</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:29;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>ewe</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>نعجة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:30;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>yew</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الطقسوس</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:31;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>40</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>You’ll</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>سوف</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:32;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Yule</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>عيد ميلاد المسيح</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:33;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>41</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>You’re</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>أنت على</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:34;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>your</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الخاص بك</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:35;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>42</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Our</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>لنا</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:36;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>hour</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>ساعة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:37;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>43</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>their</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>هم</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:38;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>there</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>هناك</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:39;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>44</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Theirs</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>لهم</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:40;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>there’s</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>هناك</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:41;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>45</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>We’ve</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>لقد فعلنا</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:42;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>weave</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>نسج</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:43;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>46</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>We’d</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>نحن سوف</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:44;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>weed</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>عشبة ضارة</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:45;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>47</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>We’ll</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>سنقوم</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:46;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>wheel</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>عجلة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:47;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>48</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>We’re</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>نحن</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:48;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>weir</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>سكون</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:49;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>49</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Him</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>له</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:50;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>hymn</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>ترنيمة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:51;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>50</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>heel</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>كعب</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:52;mso-yfti-lastrow:yes;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>heal</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>شفاء - يشفى</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<button class="collapsible">1</button>
+<div class="contentxy">
+
+<table style="width:100%">
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>51</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>He’d</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>سيفعل</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>heed</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>حذرهم</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>52</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>It’s</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>أنه</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>its</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>له ملكيته</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>53</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Who’s</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الذي هو</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>whose</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>ملك من</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>54</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>What’s</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>ما هى</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>watts</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>واط: وحدة قياس القدرة الكهربائية</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:white;
+  '></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>55</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Which</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الذي</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>witch</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>ساحرة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>56</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Blue</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>أزرق</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>blew</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>ينفخ</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>57</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Red</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>أحمر</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>read</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>اقرأ</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>58</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Greys</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الرمادي</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>graze</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>خدش</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>59</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Son</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>ابن</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>sun</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>شمس</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>60</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Aunt</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>عمة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>aren’t</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>ليس</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>61</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Father</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الآب</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>farther</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>أبعد</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:22;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>62</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Root</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>جذر</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:23;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>route</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>طريق</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:24;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>63</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Wood</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>خشب</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:25;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>would</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>سيكون</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:26;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>64</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Sea</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>البحر</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:27;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>see</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>نرى</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:28;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>65</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Tide</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>المد</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:29;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>tied</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>ربط</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:30;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>66</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Shore</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>دعم</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:31;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>sure</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>بالتأكيد</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:32;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>67</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Weather</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>طقس</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:33;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>whether</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>سواء</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:34;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>68</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Mist</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>ضباب</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:35;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>missed</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>افتقد</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:36;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>69</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Dew</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>ندى</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:37;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>due</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>بسبب</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:38;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>70</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Reed</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>قصب</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:39;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>read</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>اقرأ</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:40;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>71</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Air</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الهواء</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:41;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>heir</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الوريث</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:42;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>72</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Night</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>ليل</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:43;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>knight</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>فارس</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:44;'>
+  <td  nowrap rowspan=3 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>73</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Sew</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>خياطة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:45;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>sow</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>خنزيرة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:46;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>so</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>وبالتالي</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:47;'>
+  <td  nowrap rowspan=4 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>74</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Pause</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>وقفة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:48;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>paws</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الكفوف</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:49;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>pours</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>تصب</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:50;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>pores</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>المسام</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:51;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>75</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Wrap</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>لف</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:52;mso-yfti-lastrow:yes;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>rap</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>موسيقى الراب</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<button class="collapsible">1</button>
+<div class="contentxy">
+
+<table style="width:100%">
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;'>
+  <td  nowrap rowspan=3 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>76</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Wear</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>البس، ارتداء</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>where</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>أين</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>ware</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>سلعة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>77</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Steal</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>سرقة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>steel</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>صلب</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;'>
+  <td  nowrap rowspan=3 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>78</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Write</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>كتابة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>right</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>حق</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>rite</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>طقوس</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;'>
+  <td  nowrap rowspan=3 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>79</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Buy</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>يشترى</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>by</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>بواسطة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>bye</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>وداعا</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>80</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Sell</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>يبيع</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>cell</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>زنزانة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>81</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Hear</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>سمع</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>here</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>هنا</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>82</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Break</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>استراحة</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>brake</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الفرامل</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>83</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Affect</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>تؤثر</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>effect</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>تأثير</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>84</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Die</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>موت</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>dye</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>صبغ</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>85</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Waste</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>المخلفات</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:22;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>waist</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>وسط</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:23;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>86</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Know</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>أعرف</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:24;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>no</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>لا</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:25;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>87</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Accept</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>قبول</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:26;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>except</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>إلا</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:27;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>88</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Wait</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>انتظر</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:28;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>weight</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>وزن</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:29;'>
+  <td  nowrap rowspan=3 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>89</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Weigh</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>وزن</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:30;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>way</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الطريق</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:31;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>whey</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>مصل اللبن</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:32;'>
+  <td  nowrap rowspan=3 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>90</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Flew</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>طار</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:33;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>flu</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>أنفلونزا</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:34;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>flue</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>مداخن</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:35;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>91</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Threw</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>يرمي</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:36;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>through</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>عبر</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:37;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>92</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Male</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الذكر</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:38;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>mail</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>بريد</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:39;'>
+  <td  nowrap rowspan=3 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>93</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Vain</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>عبثا</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:40;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>vein</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الوريد</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:41;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>vane</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>ريشة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:42;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>94</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Weak</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>ضعيف</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:43;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>week</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>أسبوع</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:44;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>95</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Whole</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>كل</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:45;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>hole</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الفجوة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:46;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>96</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Bored</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>ضجر</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:47;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>board</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>لوح</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:48;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>97</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Coarse</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>خشن</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:49;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>course</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>دورة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:50;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>98</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Higher</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>أعلى</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:51;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>hire</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>توظيف</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:52;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>99</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Plain</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>عادي</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:53;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>plane</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>طائرة</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:54;'>
+  <td  nowrap rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>100</span></p>
+  </td>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Aloud</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>بصوت عال</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:55;'>
+  <td  nowrap style='background:#0070C0;
+  '>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>allowed</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>مسموح</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:56;'>
+  <td  nowrap rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+color:white;'>101</span></p>
+  </td>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>Principal</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>المالك</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:57;mso-yfti-lastrow:yes;'>
+  <td  nowrap style='background:#C0504D;'>
+  <p  ><span style='font-size:14.0pt;
+  
+  color:white;
+  '>principle</span></p>
+  </td>
+  <td  nowrap valign=bottom style='background:#C0504D;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>المبدأ</span><span dir=LTR style='font-size:14.0pt;
+color:white;'></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- table end here -->
+
+
+
+
+
+
+
+
+
+<h2 dir="rtl" style="padding: 10px;" align="justify">
+<span style="color: yellow;"><b>
+اضغط على زر الإعجاب للاشتراك
+</b></span>
+</h2>
+
+ 
+ <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0" nonce="Pu2cWjr6"></script>
+
+  <div  align="center" class="fb-page" data-href="https://www.facebook.com/Fijjlacom-107975257611185/" data-tabs="" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+	  <blockquote cite="https://www.facebook.com/Fijjlacom-107975257611185/" class="fb-xfbml-parse-ignore">
+		<a href="https://www.facebook.com/Fijjlacom-107975257611185/">Fijjla.com</a>
+	  </blockquote>
+  </div>
+ 
+
+<!-- table end here -->
+
+
+</div>
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+
+function say(m) {
+
+
+  var msg = new SpeechSynthesisUtterance();
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[4];
+  msg.voiceURI = "native";
+  msg.volume = 1;
+  msg.rate = 0.7;
+  msg.pitch = 1;
+  msg.text = m;
+  msg.lang = 'en-US';
+  speechSynthesis.speak(msg);
+  
+}
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
