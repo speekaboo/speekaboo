@@ -1,0 +1,3234 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>SpeekAboo</title>
+
+
+<link rel="icon" 
+      type="image/png" 
+      href="https://fijjla.com/Favicon.ico">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:image" content="https://fijjla.com/img/fbshare2.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image" content="https://fijjla.com/img/wpshare.png" />
+<meta property="og:image:width" content="300" />
+<meta property="og:image:height" content="300" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="SpeekAboo" />
+<meta property="og:description" content="Learn languages" />
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 8px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+/*end of welcome ads*/
+.mainframe {
+  max-width: 500px;
+  margin: auto;
+  background-color: #002060;
+  color: white;
+  margin-top : 60px;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px ;
+  margin: auto;
+  font-size: 24px;
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.link1 {
+  display: block;
+  //padding: 14px 28px;
+  background-color: black;
+  color: white;
+  //float: right;
+  //border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px ;
+  margin: auto;
+  font-size: 20px;
+  width: 45%;
+  text-align: center;
+  text-decoration: none;
+  //border: 4px solid green;
+  border-radius: 15px;
+  
+  
+}
+
+
+table {
+  padding: 2px;
+}
+
+td, th, tr, p {
+  
+  padding: 0px;
+  margin: 2px;
+  
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: right;
+  outline: none;
+  font-size: 24px;
+  border: 8px solid #002060;
+  border-radius: 20px;
+  
+}
+
+.active, .collapsible:hover {
+  background-color: green;
+  border-radius: 20px;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: left;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.contentxy {
+  //padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #B4CCEB;
+  width: 92%;
+  //border: 2px solid white;
+  margin: auto;
+  //margin-top: -16px;
+  //padding-top: -16px;
+  border-radius: 20px;
+}
+
+
+.subcir {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #fff;
+  line-height: 90px;
+  text-align: center;
+  background: #002044;
+  //border: 2px solid #002044;
+  margin: auto;
+  margin-top: 8px;
+}
+
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+
+.row {
+//padding: 20px;
+margin: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 72%; height: 18px; background-color: #4CAF50;}
+.bar-4 {width: 14.6%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 9.4%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 1.5%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 2.5%; height: 18px; background-color: #f44336;}
+
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 500px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+
+
+.topright {
+  float: right;
+  text-decoration: none;
+  background-color: #002044;
+  //border: 3px solid gray;
+  border-radius: 5px;
+  color: #fff;
+  //padding-right: 10px;
+  //padding-left: 10px;
+  padding: 10px;
+  height: 50px;
+  font-size: 24px;
+  margin-top: -50px;
+  
+}
+
+.topleft {
+  float: left;
+  text-decoration: none;
+  background-color: #DA016A;
+  //border: 3px solid gray;
+  border-radius: 5px;
+  color: #fff;
+  //padding-right: 10px;
+  //padding-left: 10px;
+  padding: 10px;
+  height: 50px;
+  font-size: 24px;
+  width: 100%;
+}
+
+
+</style>
+</head>
+<body >
+
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+
+<span class="topleft">SpeekAboo</span>
+<a class="topright" href="index.html">
+الرئيسية
+&#127968;
+</a>
+
+
+</div>
+
+
+ <!-- calculator here --> 
+<div class="mainframe">
+
+<h2 align="center">
+<br>
+الكلمات الأكثر شيوعًا التي تبدأ بالحرف
+
+<br>
+<span style="color: yellow;"><b>
+D
+</b></span>
+<br>
+
+</h2>
+
+
+
+<!-- table start here -->
+
+
+<button class="collapsible" style="background-color: red;" >
+تعليمات تفعيل الصوت
+&#128266;
+</button>
+<div class="contentxy">
+
+<p dir="rtl" style="padding: 10px;color: black;" align="justify">
+
+١- تأكد من أن هاتفك غير صامت
+<br>
+٢- إذا وصلت إلى موقعنا من خلال فيسبوك، فأنت تستخدم متصفح التطبيق وليس متصفح الجوال الرئيسي. لذلك يجب عليك فتح الرابط الخاص بنا مباشرة من المتصفح الرئيسي على هاتفك. لأن متصفح التطبيق لا يدعم ميزة الصوت
+<br>
+٣- أو ببساطة شارك رابطنا مع صديقك على الواتساب ، ثم اضغط على الرابط. سيفتح واتساب رابطنا في متصفح الهاتف الرئيسي
+<br><br>
+ملاحظة: المشكلة ليست في الرابط. إنه فقط  متصفح التطبيق لا يدعم جميع الميزات مثل المتصفح الرئيسي في هاتفك
+</p>
+</div>
+
+
+<!-- table start here -->
+
+
+<button class="collapsible">16</button>
+<div class="contentxy">
+<table style="width:100%">
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;'>
+  <td   style='
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>daily</span></p>
+  </td>
+  <td   style='
+  
+  background:#D3DFEE;
+  
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>اليومي</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  background:#D3DFEE;
+  
+  '>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>detection</span></p>
+  </td>
+  <td   style='
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>كشف</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>damage</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>ضرر</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>detention</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>احتجاز</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>damaged</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>تالف</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>determine</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>تحديد</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>damages</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>الأضرار</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>develop</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>طور</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>damaging</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>ضار</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>developer</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>مطور</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>danger</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>خطر</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>development</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>تطوير</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>dangerous</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>خطير</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>device</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>جهاز</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>dark</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>داكن</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>dialogue</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>حوار</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>data</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>البيانات</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>difference</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>فرق</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>database</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>قاعدة
+  البيانات</span><span dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>different</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>مختلف</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>date</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>تاريخ</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>difficult</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>صعب</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>daughter</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>ابنة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>difficulty</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>صعوبة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>dead</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>ميت</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>digital</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>رقمي</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>deadline</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>حد
+  اقصى</span><span dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>dinner</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>وجبة
+  عشاء</span><span dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;mso-yfti-lastrow:yes;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>deadly</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>مميت</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>dinosaur</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>ديناصور</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+<button class="collapsible">17</button>
+<div class="contentxy">
+<table style="width:100%">
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;'>
+  <td   style='
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>deal</span></p>
+  </td>
+  <td   style='
+  
+  background:#D3DFEE;
+  
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>صفقة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  background:#D3DFEE;
+  
+  '>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>diplomatic</span></p>
+  </td>
+  <td   style='
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>دبلوماسي</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>death</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>الموت</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>direct</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>مباشرة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>debate</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>النقاش</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>direction</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>اتجاه</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>debit</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>مدين</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>directly</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>مباشرة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>debris</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>الحطام</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>director</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>مخرج</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>debt</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>دين</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>disable</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>تعطيل</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>debut</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>لاول
+  مرة</span><span dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>disaster</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>كارثة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>decade</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>عقد</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>disclose</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>الكشف
+  عن</span><span dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>decent</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>محترم</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>disclosure</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>إفشاء</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>decide</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>قرر</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>discount</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>خصم</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>decision</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>قرار</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>discover</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>اكتشف</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>decline</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>انخفاض</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>discovery</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>اكتشاف</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>deep</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>عميق</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>discuss</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>مناقشة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>deeper</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>أعمق</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>discussion</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>نقاش</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;mso-yfti-lastrow:yes;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>deeply</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>بشدة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>disease</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>مرض</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+<button class="collapsible">18</button>
+<div class="contentxy">
+<table style="width:100%">
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;'>
+  <td   style='
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>default</span></p>
+  </td>
+  <td   style='
+  
+  background:#D3DFEE;
+  
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>إفتراضي</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  background:#D3DFEE;
+  
+  '>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>disk</span></p>
+  </td>
+  <td   style='
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>القرص</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>defeat</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>يهزم</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>display</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>عرض</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span class=SpellE><span
+  style='font-size:14.0pt;color:black'>defence</span></span><span
+  style='font-size:14.0pt;color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>دفاع</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>dispute</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>خلاف</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>defend</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>الدفاع</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>disputed</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>متنازع
+  عليه</span><span dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>defender</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>المدافع</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>disrupt</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>تعطل</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>defense</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>دفاع</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>disruption</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>اضطراب</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>deficit</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>عجز</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>distance</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>مسافة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>define</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>حدد</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>distant</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>بعيد</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>definitely</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>قطعا</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>distribute</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>نشر</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>definition</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>تعريف</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>distribution</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>توزيع</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>degree</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>الدرجة
+  العلمية</span><span dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>district</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>منطقة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>delay</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>تأخير</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>diverse</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>متنوعة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>delete</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>حذف</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>diversity</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>تنوع</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>deliver</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>ايصال</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>division</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>قطاع</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;mso-yfti-lastrow:yes;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>delivery</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>توصيل</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>dock</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>الرصيف</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+<button class="collapsible">19</button>
+<div class="contentxy">
+<table style="width:100%">
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;'>
+  <td   style='
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>demand</span></p>
+  </td>
+  <td   style='
+  
+  background:#D3DFEE;
+  
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>الطلب</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  background:#D3DFEE;
+  
+  '>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>doctor</span></p>
+  </td>
+  <td   style='
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>طبيب</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>demanded</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>طالب</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>document</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>المستند</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>demanding</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>متطلب</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>dollar</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>دولار</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>demo</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>تجريبي</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>domain</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>نطاق</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>democracy</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>ديمقراطية</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>domestic</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>المنزلي</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>demonstrate</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>يتظاهر</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>dominant</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>مهيمن</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>deny</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>أنكر</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>door</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>باب</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>department</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>قسم</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>double</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>مزدوج</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>departure</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>مغادرة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>doubt</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>شك</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>depend</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>تعتمد</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>down</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>أسفل</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>deploy</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>نشر</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>download</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>تحميل</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>deployment</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>تعيين</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>downtown</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>وسط
+  البلد</span><span dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>depth</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>عمق</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>dozen</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>دزينة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>deputy</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>نائب</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>draft</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>مشروع</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;mso-yfti-lastrow:yes;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>describe</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>وصف</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>drag</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>سحب</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+<button class="collapsible">20</button>
+<div class="contentxy">
+<table style="width:100%">
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;'>
+  <td   style='
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>description</span></p>
+  </td>
+  <td   style='
+  
+  background:#D3DFEE;
+  
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>وصف</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  background:#D3DFEE;
+  
+  '>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>dramatic</span></p>
+  </td>
+  <td   style='
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>دراماتيكي</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>desert</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>صحراء</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>dramatically</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>بشكل
+  كبير</span><span dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>design</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>التصميم</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>draw</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>رسم</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>designer</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>مصمم</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>dream</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>حلم</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>desire</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>رغبة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>drive</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>قيادة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>desk</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>مكتب</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>driver</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>سائق</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>desktop</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>سطح
+  المكتب</span><span dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>drone</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>طائرة
+  بدون طيار</span><span dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>desperate</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>يائسة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>drop</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>قطرة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>despite</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>على
+  الرغم من</span><span dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>drought</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>جفاف</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>destination</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>المكان
+  المقصود</span><span dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>drug</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>دواء</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>destroy</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>هدم</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>dual</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>مزدوج</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>destruction</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>تدمير</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>during</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>أثناء</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>detail</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>التفاصيل</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>dust</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>غبار</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;'>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>detailed</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>مفصلة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   >
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>duty</span></p>
+  </td>
+  <td   >
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>مهمة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;mso-yfti-lastrow:yes;'>
+  <td   style='
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>detect</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>الكشف</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+  <td   style='
+  
+  
+  background:#D3DFEE;'>
+  <p  align=center style='
+  text-align:center;'><span
+  style='font-size:14.0pt;color:black'>dynamic</span></p>
+  </td>
+  <td   style='
+  
+  
+  background:
+  #D3DFEE;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;
+  '><span lang=AR-SA style='font-size:14.0pt;
+  
+  color:black'>ديناميكي</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:black'></span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+
+
+
+<button class="collapsible" style="background-color: blue;" >A الأكثر شيوعا</button>
+<div class="contentxy">
+<p dir="rtl" style="padding: 30px;color: black;" align="justify">
+الكلمات الأكثر شيوعًا التي تبدأ بالحرف
+<span style="color: red;"><b>
+A
+</b></span>
+<br>
+</p>
+<br>
+<a class="link1" href="a.html">
+<<
+المزيد 
+</a>
+<br>
+<br>
+</div>
+
+
+<button class="collapsible" style="background-color: blue;" >B الأكثر شيوعا</button>
+<div class="contentxy">
+<p dir="rtl" style="padding: 30px;color: black;" align="justify">
+الكلمات الأكثر شيوعًا التي تبدأ بالحرف
+<span style="color: red;"><b>
+B
+</b></span>
+<br>
+</p>
+<br>
+<a class="link1" href="b.html">
+<<
+المزيد 
+</a>
+<br>
+<br>
+</div>
+
+<button class="collapsible" style="background-color: blue;" >C الأكثر شيوعا</button>
+<div class="contentxy">
+<p dir="rtl" style="padding: 30px;color: black;" align="justify">
+الكلمات الأكثر شيوعًا التي تبدأ بالحرف
+<span style="color: red;"><b>
+C
+</b></span>
+<br>
+</p>
+<br>
+<a class="link1" href="c.html">
+<<
+المزيد 
+</a>
+<br>
+<br>
+</div>
+
+<button class="collapsible" style="background-color: blue;" >D الأكثر شيوعا</button>
+<div class="contentxy">
+<p dir="rtl" style="padding: 30px;color: black;" align="justify">
+الكلمات الأكثر شيوعًا التي تبدأ بالحرف
+<span style="color: red;"><b>
+D
+</b></span>
+<br>
+</p>
+<br>
+<a class="link1" href="d.html">
+<<
+المزيد 
+</a>
+<br>
+<br>
+</div>
+
+<!-- table end here -->
+
+
+
+
+
+
+
+
+
+<h2 dir="rtl" style="padding: 10px;" align="justify">
+<span style="color: yellow;"><b>
+اضغط على زر الإعجاب للاشتراك
+</b></span>
+</h2>
+
+ 
+ <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0" nonce="Pu2cWjr6"></script>
+
+  <div  align="center" class="fb-page" data-href="https://www.facebook.com/Fijjlacom-107975257611185/" data-tabs="" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+	  <blockquote cite="https://www.facebook.com/Fijjlacom-107975257611185/" class="fb-xfbml-parse-ignore">
+		<a href="https://www.facebook.com/Fijjlacom-107975257611185/">Fijjla.com</a>
+	  </blockquote>
+  </div>
+ 
+
+<!-- table end here -->
+
+
+</div>
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+
+function say(m) {
+
+
+  var msg = new SpeechSynthesisUtterance();
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[4];
+  msg.voiceURI = "native";
+  msg.volume = 1;
+  msg.rate = 0.7;
+  msg.pitch = 1;
+  msg.text = m;
+  msg.lang = 'en-US';
+  speechSynthesis.speak(msg);
+  
+}
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
