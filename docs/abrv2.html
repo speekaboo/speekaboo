@@ -1,0 +1,2071 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>SpeekAboo</title>
+
+
+<link rel="icon" 
+      type="image/png" 
+      href="https://fijjla.com/Favicon.ico">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:image" content="https://fijjla.com/img/fbshare2.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image" content="https://fijjla.com/img/wpshare.png" />
+<meta property="og:image:width" content="300" />
+<meta property="og:image:height" content="300" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="SpeekAboo" />
+<meta property="og:description" content="Learn languages" />
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 8px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+/*end of welcome ads*/
+.mainframe {
+  max-width: 500px;
+  margin: auto;
+  background-color: #002060;
+  color: white;
+  margin-top : 60px;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px ;
+  margin: auto;
+  font-size: 24px;
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.link1 {
+  display: block;
+  //padding: 14px 28px;
+  background-color: black;
+  color: white;
+  //float: right;
+  //border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px ;
+  margin: auto;
+  font-size: 20px;
+  width: 45%;
+  text-align: center;
+  text-decoration: none;
+  //border: 4px solid green;
+  border-radius: 15px;
+  
+  
+}
+
+
+table {
+  padding: 2px;
+}
+
+td, th, tr, p {
+  
+  padding: 0px;
+  margin: 2px;
+  
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: right;
+  outline: none;
+  font-size: 24px;
+  border: 8px solid #002060;
+  border-radius: 20px;
+  
+}
+
+.active, .collapsible:hover {
+  background-color: green;
+  border-radius: 20px;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: left;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.contentxy {
+  //padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #002044;
+  width: 92%;
+  //border: 2px solid white;
+  margin: auto;
+  //margin-top: -16px;
+  //padding-top: -16px;
+  border-radius: 20px;
+}
+
+
+.subcir {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #fff;
+  line-height: 90px;
+  text-align: center;
+  background: #002044;
+  //border: 2px solid #002044;
+  margin: auto;
+  margin-top: 8px;
+}
+
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+
+.row {
+//padding: 20px;
+margin: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 72%; height: 18px; background-color: #4CAF50;}
+.bar-4 {width: 14.6%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 9.4%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 1.5%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 2.5%; height: 18px; background-color: #f44336;}
+
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 500px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+
+
+.topright {
+  float: right;
+  text-decoration: none;
+  background-color: #002044;
+  //border: 3px solid gray;
+  border-radius: 5px;
+  color: #fff;
+  //padding-right: 10px;
+  //padding-left: 10px;
+  padding: 10px;
+  height: 50px;
+  font-size: 24px;
+  margin-top: -50px;
+  
+}
+
+.topleft {
+  float: left;
+  text-decoration: none;
+  background-color: #DA016A;
+  //border: 3px solid gray;
+  border-radius: 5px;
+  color: #fff;
+  //padding-right: 10px;
+  //padding-left: 10px;
+  padding: 10px;
+  height: 50px;
+  font-size: 24px;
+  width: 100%;
+}
+
+
+</style>
+</head>
+<body >
+
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+
+<span class="topleft">SpeekAboo</span>
+<a class="topright" href="index.html">
+الرئيسية
+&#127968;
+</a>
+
+
+</div>
+
+
+ <!-- calculator here --> 
+<div class="mainframe">
+
+<h2 align="center">
+<br>
+الاختصارات
+<br>
+<span style="color: yellow;"><b>
+Abbreviations
+</b></span>
+<br>
+<br>
+الصفحة الثانية
+</h2>
+
+<p dir="rtl" style="padding: 30px;" align="justify">
+الاختصارات هي أشكال مختصرة من الكلمات أو عبارات طويلة. ستجدهم في كل تخصص ومجال من مجالات الحياة تقريبًا ، من الاختصارات الشائعة الاستخدام في الأسماء أو الألقاب
+<br><br>
+يوجد أكثر من نوع واحد من الاختصارات. الاختصار هو كلمة جديدة يتم إنشاؤها من الأحرف الأولى لاسم طويل أو عبارة ، على سبيل المثال ، الناتو (منظمة حلف شمال الأطلسي). البداية هي حيث يتم اختصار عبارة طويلة إلى أحرفها الأولية ولكن يتم نطق الحروف بشكل فردي ، ولا يتم نطقها ككلمة - على سبيل المثال ، FBI (مكتب التحقيقات الفيدرالي). يمكن اعتبار البداية نوعًا من الاختصار.
+<br><br>
+في القائمة التالية اختصارات شائعة الاستخدام ، توجد في جميع مجالات الحياة من الطب إلى الجيش والجغرافيا والتكنولوجيا.
+
+</p>
+
+<!-- table start here -->
+
+
+<button class="collapsible" style="background-color: red;" >
+تعليمات تفعيل الصوت
+&#128266;
+</button>
+<div class="contentxy">
+
+<p dir="rtl" style="padding: 10px;" align="justify">
+
+١- تأكد من أن هاتفك غير صامت
+<br>
+٢- إذا وصلت إلى موقعنا من خلال فيسبوك، فأنت تستخدم متصفح التطبيق وليس متصفح الجوال الرئيسي. لذلك يجب عليك فتح الرابط الخاص بنا مباشرة من المتصفح الرئيسي على هاتفك. لأن متصفح التطبيق لا يدعم ميزة الصوت
+<br>
+٣- أو ببساطة شارك رابطنا مع صديقك على الواتساب ، ثم اضغط على الرابط. سيفتح واتساب رابطنا في متصفح الهاتف الرئيسي
+<br><br>
+ملاحظة: المشكلة ليست في الرابط. إنه فقط  متصفح التطبيق لا يدعم جميع الميزات مثل المتصفح الرئيسي في هاتفك
+</p>
+</div>
+
+
+<!-- table start here -->
+
+
+<button class="collapsible">المجموعة الأولى</button>
+<div class="contentxy">
+<table style="width:100%">
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;'>
+  <td  rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>AIDS</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Acquired
+  Immune Deficiency Syndrome</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>متلازمة نقص المناعة المكتسب</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;'>
+  <td   rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>AM</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Before
+  Midday</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>قبل منتصف النهار</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;'>
+  <td   rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>ASAP</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>As
+  Soon As Possible</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>في أقرب وقت ممكن</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;'>
+  <td   rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>BYOD</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Bring
+  Your Own Device</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>اجلب جهازك الخاص</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;'>
+  <td   rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>CDC</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Centers
+  for Disease Control and Prevention</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>مراكز السيطرة على الأمراض والوقاية منها</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:white;
+  '></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;'>
+  <td  rowspan=2 style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>CEO</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Chief
+  Executive Officer</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الرئيس التنفيذى</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;'>
+  <td   rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>CFO</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Chief
+  Financial Officer</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>المدير المالي</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;'>
+  <td  rowspan=2 style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>CIA</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Central
+  Intelligence Agency</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>وكالة الإستخبارات المركزية</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16;'>
+  <td   rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>COO</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Chief
+  Operating Officer</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الرئيس التنفيذي للعمليات</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18;'>
+  <td  rowspan=2 style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>CTO</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Chief
+  Technology Officer</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الرئيس التنفيذي للتكنولوجيا</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20;'>
+  <td  rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>DIY</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Do It
+  Yourself</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21;mso-yfti-lastrow:yes;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>افعلها بنفسك</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+<button class="collapsible">المجموعة الثانية</button>
+<div class="contentxy">
+<table style="width:100%">
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;'>
+  <td  rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>DNA</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Deoxyribonucleic
+  Acid</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الحمض النووي</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;'>
+  <td  rowspan=2 style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>DOE</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Department
+  of Energy</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>قسم الطاقة</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;'>
+  <td   rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>DOJ</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Department
+  of Justice</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>وزارة العدل</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;'>
+  <td  rowspan=2 style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>EDT</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Eastern
+  Daylight Time</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>التوقيت الصيفي الشرقي</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;'>
+  <td   rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>EST</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Eastern
+  Standard Time</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>التوقيت الشرقي</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;'>
+  <td  rowspan=2 style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>ET</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Eastern
+  Time</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>التوقيت الشرقي</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;'>
+  <td   rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>EU</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>European
+  Union</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الإتحاد الأوربي</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;'>
+  <td  rowspan=2 style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>FAA</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Federal
+  Aviation Administration</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>إدارة الطيران الفيدرالية</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16;'>
+  <td   rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>FAQ</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Frequently
+  Asked Question</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>أسئلة شائعة</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18;'>
+  <td  rowspan=2 style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>FBI</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Federal
+  Bureau of Investigation</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>مكتب التحقيقات الفيدرالي</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20;'>
+  <td   rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>FCC</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>The
+  Federal Communications Commission</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21;mso-yfti-lastrow:yes;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>هيئة الاتصالات الفيدرالية</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+<button class="collapsible">المجموعة الثالثة</button>
+<div class="contentxy">
+<table style="width:100%">
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;'>
+  <td  rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>FDA</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Food
+  and Drug Administration</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>إدارة الغذاء والدواء</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;'>
+  <td   rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>FIFA</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Federation
+  International de Football Association</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الاتحاد الدولي لكرة القدم</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;'>
+  <td   rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>FTC</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Federal
+  Trade Commission</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>لجنة التجارة الفيدرالية</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;'>
+  <td  rowspan=2 style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>GDP</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Gross
+  Domestic Product</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>إجمالي الناتج المحلي</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;'>
+  <td  rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>HIV</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Human
+  Immunodeficiency Virus</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>فيروس نقص المناعة البشرية</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;'>
+  <td   rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>HR</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Human
+  Resource</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الموارد البشرية</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;'>
+  <td   rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>ID</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Identification</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>هوية</span><span dir=LTR style='font-size:14.0pt;
+  
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;'>
+  <td   rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>IEEE</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Institute
+  of Electrical and Electronics Engineers</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>معهد مهندسي الكهرباء والإلكترونيات</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:white;
+  '></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16;'>
+  <td  rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>IRA</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Individual
+  Retirement Account</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>حساب التقاعد الفردي</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18;'>
+  <td   rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>IRS</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Internal
+  Revenue Service</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>دائرة الإيرادات الداخلية</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20;'>
+  <td  rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>IT</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Information
+  Technology</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21;mso-yfti-lastrow:yes;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>تكنولوجيا المعلومات</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+<button class="collapsible">المجموعة الرابعة</button>
+<div class="contentxy">
+<table style="width:100%">
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;'>
+  <td  rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>KFC</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Kentucky
+  Fried Cruelty</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>كنتاكي فرايد</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;'>
+  <td   rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>LA</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Los
+  Angeles</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>لوس أنجلوس</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;'>
+  <td   rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>MBA</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Master
+  of Business Administration</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>ماجستير إدارة الأعمال</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;'>
+  <td  rowspan=2 style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>MIT</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Massachusetts
+  Institute of Technology</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>معهد ماساتشوستس للتكنولوجيا</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;'>
+  <td   rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>MSRP</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Manufacturer's
+  Suggested Retail Price</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>سعر التجزئة المقترح من الشركة المصنعة</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:white;
+  '></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;'>
+  <td  rowspan=2 style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>NASA</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>The
+  National Aeronautics and Space Administration</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الإدارة الوطنية للملاحة الجوية والفضاء</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:white;
+  '></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;'>
+  <td   rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>NATO</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>North
+  Atlantic Treaty Organization</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>منظمة حلف شمال الأطلسي</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;'>
+  <td  rowspan=2 style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>NBA</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>National
+  Basketball Association</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الرابطة الوطنية لكرة السلة</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16;'>
+  <td   rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>NFL</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>National
+  Football League</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الرابطة الوطنية لكرة القدم</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18;'>
+  <td  rowspan=2 style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>NOAA</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>National
+  Oceanic and Atmospheric Administration</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الإدارة الوطنية للمحيطات والغلاف الجوي</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:white;
+  '></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20;'>
+  <td   rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>NSA</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>National
+  Security Agency</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21;mso-yfti-lastrow:yes;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>وكالة الأمن القومي</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+<button class="collapsible">المجموعة الخامسة</button>
+<div class="contentxy">
+<table style="width:100%">
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;'>
+  <td   rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>NYC</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>New
+  York City</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>مدينة نيويورك</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;'>
+  <td   rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>OPEC</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Organization
+  of Petroleum Exporting Countries</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>منظمة البلدان المصدرة للبترول</span><span
+  dir=LTR style='font-size:14.0pt;
+  
+  color:white;
+  '></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;'>
+  <td  rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>PR</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Public
+  Relations</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>علاقات عامة</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;'>
+  <td   rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>PT</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Pacific
+  Time</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>بتوقيت المحيط الهادئ</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;'>
+  <td   rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>SUV</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Sport
+  Utility Vehicle</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>سيارة رياضية</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;'>
+  <td   rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>UK</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>United
+  Kingdom</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>المملكة المتحدة</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;'>
+  <td  rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>UN</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>United
+  Nation</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>الامم المتحدة</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;'>
+  <td  rowspan=2 style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>UV</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Ultraviolet</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>فوق بنفسجي</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16;'>
+  <td  rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>VIP</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Very
+  Important Person</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>شخص مهم جدا</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18;'>
+  <td   rowspan=2 style='background:#C0504D;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>VP</span></p>
+  </td>
+  <td   style='background:#C0504D;'>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>Vice
+  President</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19;'>
+  <td   style='background:#C0504D;'>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>نائب الرئيس</span><span dir=LTR style='font-size:
+  14.0pt;
+  
+  color:white;'></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20;'>
+  <td  rowspan=2 style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>WHO</span></p>
+  </td>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  
+  color:white;'>World
+  Health Organization</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21;mso-yfti-lastrow:yes;'>
+  <td   style='background:#0070C0;
+  '>
+  <p  align=center dir=RTL style='text-align:center;direction:rtl;'><span
+  lang=AR-SA style='font-size:14.0pt;
+  
+  color:white;
+  '>منظمة الصحة العالمية</span><span dir=LTR
+  style='font-size:14.0pt;color:white;'></span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+
+<button class="collapsible" style="background-color: blue;" >الصفحة الأولى</button>
+<div class="contentxy">
+<p dir="rtl" style="padding: 30px;" align="justify">
+المزيد من الاختصارات هنا
+<br>
+</p>
+<br>
+<a class="link1" href="abrv1.html">
+<<
+المزيد 
+</a>
+<br>
+<br>
+</div>
+
+
+<!-- table end here -->
+
+
+
+
+
+
+
+
+
+<h2 dir="rtl" style="padding: 10px;" align="justify">
+<span style="color: yellow;"><b>
+اضغط على زر الإعجاب للاشتراك
+</b></span>
+</h2>
+
+ 
+ <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0" nonce="Pu2cWjr6"></script>
+
+  <div  align="center" class="fb-page" data-href="https://www.facebook.com/Fijjlacom-107975257611185/" data-tabs="" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+	  <blockquote cite="https://www.facebook.com/Fijjlacom-107975257611185/" class="fb-xfbml-parse-ignore">
+		<a href="https://www.facebook.com/Fijjlacom-107975257611185/">Fijjla.com</a>
+	  </blockquote>
+  </div>
+ 
+
+<!-- table end here -->
+
+
+</div>
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+
+function say(m) {
+
+
+  var msg = new SpeechSynthesisUtterance();
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[4];
+  msg.voiceURI = "native";
+  msg.volume = 1;
+  msg.rate = 0.7;
+  msg.pitch = 1;
+  msg.text = m;
+  msg.lang = 'en-US';
+  speechSynthesis.speak(msg);
+  
+}
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
