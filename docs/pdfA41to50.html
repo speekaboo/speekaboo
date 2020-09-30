@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>دروس إنجليزية مجانية</title>
+
+
+<link rel="icon" 
+      type="image/png" 
+      href="https://speekaboo.github.io/speekaboo/Favicon.ico">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:image" content="https://speekaboo.github.io/speekaboo/img/freelessonsfb.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image" content="https://speekaboo.github.io/speekaboo/img/freelessonswapp.png" />
+<meta property="og:image:width" content="300" />
+<meta property="og:image:height" content="300" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="دروس إنجليزية مجانية - الجزء الاول" />
+<meta property="og:description" content="من الدرس الواحد والاربعون حتى الدرس الخمسون" />
+
+<meta property="og:url" content="https://speekaboo.github.io/speekaboo/pdfA41to50.html" />
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 8px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+/*end of welcome ads*/
+.mainframe {
+  max-width: 500px;
+  margin: auto;
+  background-color: #002060;
+  color: white;
+  margin-top : 60px;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px ;
+  margin: auto;
+  font-size: 24px;
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.link1 {
+  display: block;
+  //padding: 14px 28px;
+  background-color: black;
+  color: white;
+  //float: right;
+  //border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px ;
+  margin: auto;
+  font-size: 20px;
+  width: 45%;
+  text-align: center;
+  text-decoration: none;
+  //border: 4px solid green;
+  border-radius: 15px;
+  
+  
+}
+
+
+table {
+  padding: 2px;
+}
+
+td, th, tr, p {
+  
+  padding: 0px;
+  margin: 2px;
+  
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: right;
+  outline: none;
+  font-size: 24px;
+  border: 8px solid #002060;
+  border-radius: 20px;
+  
+}
+
+.active, .collapsible:hover {
+  background-color: green;
+  border-radius: 20px;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: left;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.contentxy {
+  //padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #B4CCEB;
+  width: 92%;
+  //border: 2px solid white;
+  margin: auto;
+  //margin-top: -16px;
+  //padding-top: -16px;
+  border-radius: 20px;
+}
+
+
+.subcir {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #fff;
+  line-height: 90px;
+  text-align: center;
+  background: #002044;
+  //border: 2px solid #002044;
+  margin: auto;
+  margin-top: 8px;
+}
+
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+
+.row {
+//padding: 20px;
+margin: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 72%; height: 18px; background-color: #4CAF50;}
+.bar-4 {width: 14.6%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 9.4%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 1.5%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 2.5%; height: 18px; background-color: #f44336;}
+
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 500px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+
+
+.topright {
+  float: right;
+  text-decoration: none;
+  background-color: #002044;
+  //border: 3px solid gray;
+  border-radius: 5px;
+  color: #fff;
+  //padding-right: 10px;
+  //padding-left: 10px;
+  padding: 10px;
+  height: 50px;
+  font-size: 24px;
+  margin-top: -50px;
+  
+}
+
+.topleft {
+  float: left;
+  text-decoration: none;
+  background-color: #DA016A;
+  //border: 3px solid gray;
+  border-radius: 5px;
+  color: #fff;
+  //padding-right: 10px;
+  //padding-left: 10px;
+  padding: 10px;
+  height: 50px;
+  font-size: 24px;
+  width: 100%;
+}
+
+.linkrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.linkcolumn {
+  float: left;
+  width: 100%;
+  padding: 0px;
+  background-color: black;
+  color: white;
+  border: 0px solid #002060;
+}
+
+.linkcolumn > a{
+  color: white;
+  text-decoration: none;
+}
+
+.linkcolumn:hover {
+  background-color: gray;
+}
+
+.linkcolumn2 {
+  float: left;
+  width: 33.3%;
+  padding: 5px;
+  background-color: gray;
+  color: white;
+  z-index: 2;
+}
+
+.linkcolumn2 > a{
+  color: white;
+  
+}
+
+.linkcolumn2:hover {
+  background-color: black;
+}
+
+
+
+</style>
+</head>
+<body >
+
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+
+<span class="topleft">SpeekAboo</span>
+<a class="topright" href="index.html">
+الرئيسية
+&#127968;
+</a>
+
+
+</div>
+
+
+ <!-- calculator here --> 
+<div class="mainframe">
+<br>
+<h2 align="center">
+دروس إنجليزية مجانية
+<br><br>
+الجزء الاول
+</h2>
+
+<p align="center">
+<span style="color: yellow;"><b>
+من الدرس الواحد والاربعون حتى الدرس الخمسون
+</b></span>
+</p>
+
+<br>
+
+<!-- table start here -->
+
+
+<!-- table start here -->
+
+<div class="linkrow">
+	<div class="linkcolumn" >
+	<a href="pdf/speekaboo.A1Lesson41.pdf" target="_blank">
+	<h2 align="center">
+الدرس الواحد والاربعون
+	<br>
+أسماء التفضيل العليا
+	</h2>
+	</a>
+	</div>
+</div>	
+<br>
+<div class="linkrow">
+	<div class="linkcolumn" >
+	<a href="pdf/speekaboo.A1Lesson42.pdf" target="_blank">
+	<h2 align="center">
+الدرس الثاني والاربعون
+	<br>
+ظروف الزمن
+	</h2>
+	</a>
+	</div>
+</div>	
+<br>
+<div class="linkrow">
+	<div class="linkcolumn" >
+	<a href="pdf/speekaboo.A1Lesson43.pdf" target="_blank">
+	<h2 align="center">
+الدرس الثالث والاربعون
+	<br>
+الأفعال الناقصة - Can و Could
+	</h2>
+	</a>
+	</div>
+</div>	
+<br>
+<div class="linkrow">
+	<div class="linkcolumn" >
+	<a href="pdf/speekaboo.A1Lesson44.pdf" target="_blank">
+	<h2 align="center">
+الدرس الرابع والاربعون
+	<br>
+الأفعال الناقصة - Must
+</h2>
+	</a>
+	</div>
+</div>	
+<br>
+
+
+<div class="linkrow">
+	<div class="linkcolumn" >
+	<a href="pdf/speekaboo.A1Lesson45.pdf" target="_blank">
+	<h2 align="center">
+الدرس الخامس والاربعون
+	<br>
+الأفعال الناقصة - Would Like 
+	</h2>
+	</a>
+	</div>
+</div>	
+<br>
+<div class="linkrow">
+	<div class="linkcolumn" >
+	<a href="pdf/speekaboo.A1Lesson46.pdf" target="_blank">
+	<h2 align="center">
+الدرس السادس والاربعون
+	<br>
+الأفعال الناقصة - May و Might
+	</h2>
+	</a>
+	</div>
+</div>	
+<br>
+<div class="linkrow">
+	<div class="linkcolumn" >
+	<a href="pdf/speekaboo.A1Lesson47.pdf" target="_blank">
+	<h2 align="center">
+الدرس السابع والاربعون
+	<br>
+مراجعة لكل حروف الجر
+	</h2>
+	</a>
+	</div>
+</div>	
+<br>
+<div class="linkrow">
+	<div class="linkcolumn" >
+	<a href="pdf/speekaboo.A1Lesson48.pdf" target="_blank">
+	<h2 align="center">
+الدرس الثامن والاربعون
+	<br>
+?What Does … Like
+<br>? What is … Like
+
+ </h2>
+	</a>
+	</div>
+</div>	
+<br>
+<div class="linkrow">
+	<div class="linkcolumn" >
+	<a href="pdf/speekaboo.A1Lesson49.pdf" target="_blank">
+	<h2 align="center">
+الدرس التاسع والاربعون
+	<br>
+أدوات الربط
+	</h2>
+	</a>
+	</div>
+</div>	
+<br>
+<div class="linkrow">
+	<div class="linkcolumn" >
+	<a href="pdf/speekaboo.A1Lesson50.pdf" target="_blank">
+	<h2 align="center">
+الدرس الخمسون
+	<br>
+صيغة الامر
+	</h2>
+	</a>
+	</div>
+</div>	
+
+
+<br>
+<br>
+<br>
+
+<div class="linkrow">
+  <div class="linkcolumn2" >
+  	<a href="pdfA01to10.html" target="_blank">
+    <h4 align="center">درس ١ الى ١٠</h3>
+    </a>
+  </div>
+  <div class="linkcolumn2" >
+  	<a href="pdfA11to20.html" target="_blank">
+    <h4 align="center">درس ١١ الى ٢٠</h3>
+    </a>
+  </div>
+  <div class="linkcolumn2" >
+    <a href="pdfA21to30.html" target="_blank">
+    <h4 align="center">درس ٢١ الى ٣٠</h3>
+    </a>
+  </div>
+  <div class="linkcolumn2" >
+    <a href="pdfA31to40.html" target="_blank">
+    <h4 align="center">درس ٣١ الى ٤٠</h3>
+    </a>
+  </div>
+  <div class="linkcolumn2" >
+  	<a href="pdfA41to50.html" target="_blank">
+    <h4 align="center">درس ٤١ الى ٥٠</h3>
+    </a>
+  </div>
+  
+  <div class="linkcolumn2" >
+  	<a href="pdfB01to10.html" target="_blank">
+    <h4 align="center">الجزء الثاني</h3>
+    </a>
+  </div>
+</div>
+
+<br>
+
+
+
+
+
+
+
+
+
+<!-- table end here -->
+
+
+
+
+
+
+
+
+
+<h2 dir="rtl" style="padding: 10px;" align="justify">
+<span style="color: yellow;"><b>
+اضغط على زر الإعجاب للاشتراك
+</b></span>
+</h2>
+
+ 
+ <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0" nonce="Pu2cWjr6"></script>
+
+  <div  align="center" class="fb-page" data-href="https://www.facebook.com/Fijjlacom-107975257611185/" data-tabs="" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+	  <blockquote cite="https://www.facebook.com/Fijjlacom-107975257611185/" class="fb-xfbml-parse-ignore">
+		<a href="https://www.facebook.com/Fijjlacom-107975257611185/">Fijjla.com</a>
+	  </blockquote>
+  </div>
+ 
+
+<!-- table end here -->
+
+
+</div>
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+
+function say(m) {
+
+
+  var msg = new SpeechSynthesisUtterance();
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[4];
+  msg.voiceURI = "native";
+  msg.volume = 1;
+  msg.rate = 0.7;
+  msg.pitch = 1;
+  msg.text = m;
+  msg.lang = 'en-US';
+  speechSynthesis.speak(msg);
+  
+}
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
