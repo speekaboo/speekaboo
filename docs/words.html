@@ -2910,16 +2910,19 @@ for (i = 0; i < coll.length; i++) {
 }
 
 
+  var msg = new SpeechSynthesisUtterance();
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[0];
+  msg.voiceURI = "native";
+  msg.volume = 1;
+  msg.rate = 0.3;
+  msg.pitch = 1;
+
+
 function say(m) {
 
 
-  var msg = new SpeechSynthesisUtterance();
-  var voices = window.speechSynthesis.getVoices();
-  msg.voice = voices[4];
-  msg.voiceURI = "native";
-  msg.volume = 1;
-  msg.rate = 0.7;
-  msg.pitch = 1;
+  
   msg.text = m;
   msg.lang = 'en-US';
   speechSynthesis.speak(msg);
