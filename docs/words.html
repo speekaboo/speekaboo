@@ -2940,7 +2940,6 @@ Eat
 
 <!-- table end here -->
 
-<h2 align="center" style="margin: 4px;" id="today">test</h2>
 </div>
 
 
@@ -2949,6 +2948,15 @@ Eat
 
 var coll = document.getElementsByClassName("collapsible");
 var i;
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+
+var substring3 = "en";
+
+output.innerHTML = slider.value *10 +' %';
+
+
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
@@ -2963,44 +2971,18 @@ for (i = 0; i < coll.length; i++) {
 }
 
 
-  
-
-
 function say(m) {
 
 	if(typeof speechSynthesis === 'undefined') {
     return;
   }
 
-
-  var substring1 = "en-US";
-  var substring2 = "en_US";
   var list1 = document.getElementById("voiceSelect");
   
-  //document.getElementById("today").innerHTML = voices[0].name() ;
-  //console.log(window.speechSynthesis.getVoices());
+
   var msg = new SpeechSynthesisUtterance();
   var voices = window.speechSynthesis.getVoices();
-  
-  
-  /*
-    for(var i = 0; i < voices.length; i++) {
-  	
-			if(voices[i].lang.indexOf(substring1) !== -1) {
-				msg.voice = voices[i];
-				//console.log(msg.voice);
-				//msg.lang = substring1;
-			}
-			
-			if(voices[i].lang.indexOf(substring2) !== -1) {
-				//msg.voice = voices[i];
-				//console.log(msg.voice);
-				//msg.lang = substring2;
-			}
-			//console.log(voices[i].lang);
-	}
-  */
-  
+   
   
   msg.voice = voices[ Number(list1.value.substr(0, list1.value.indexOf('-')))   ];
   msg.voiceURI = "native";
@@ -3010,27 +2992,15 @@ function say(m) {
   msg.text = m;
   msg.lang = 'en-US';
   speechSynthesis.speak(msg);
-  
-  document.getElementById("today").innerHTML = list1.value.substr(0, list1.value.indexOf('-'));
-   //var streetaddress= list1.value.substr(0, list1.value.indexOf(',')); 
-  
+
 }
 
 
 
-
-
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value *10 +' %';
 
 slider.oninput = function() {
   output.innerHTML = this.value *10 +' %';
 }
-
-
-
-var substring3 = "en";
 
 function populateVoiceList() {
   if(typeof speechSynthesis === 'undefined') {
@@ -3040,15 +3010,13 @@ function populateVoiceList() {
 
   var voices = speechSynthesis.getVoices();
 
+  document.getElementById("voiceSelect").innerHTML = '';
   for(var i = 0; i < voices.length; i++) {
   
 		if(voices[i].lang.indexOf(substring3) !== -1) {
 			var option = document.createElement('option');
 			option.textContent = i + '-' + voices[i].name + ' (' + voices[i].lang + ')';
 			
-			//if(voices[i].default) {
-			 //option.textContent += ' -- DEFAULT';
-			//}
 
 			option.setAttribute('data-lang', voices[i].lang);
 			option.setAttribute('data-name', voices[i].name);
@@ -3057,16 +3025,11 @@ function populateVoiceList() {
   }
 }
 
-
 populateVoiceList();
-	//return;
-
 
 if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
 	speechSynthesis.onvoiceschanged = populateVoiceList;
 }
-
-
 
 </script>
 
