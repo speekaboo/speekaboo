@@ -2862,7 +2862,7 @@ Eat
 
 <!-- table end here -->
 
-
+<p>test</p>
 
 
 <h2 dir="rtl" style="padding: 10px;" align="justify">
@@ -2916,7 +2916,7 @@ function say(m) {
   }
 
 
-  var substring = "es";
+  var substring = "bn";
   
   //document.getElementById("today").innerHTML = voices[0].name() ;
   //console.log(window.speechSynthesis.getVoices());
@@ -2929,7 +2929,7 @@ function say(m) {
   	
 			if(voices[i].lang.indexOf(substring) !== -1) {
 				msg.voice = voices[i];
-				//console.log(msg.voice);
+				console.log(msg.voice);
 			}
 			//console.log(voices[i].lang);
 	}
@@ -2942,7 +2942,7 @@ function say(m) {
   msg.rate = 0.3;
   msg.pitch = 1;
   msg.text = m;
-  msg.lang = 'en-US';
+  //msg.lang = 'en-US';
   speechSynthesis.speak(msg);
   
   
