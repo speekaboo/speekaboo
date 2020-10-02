@@ -298,7 +298,9 @@ margin: 20px;
 }
 
 
-
+select {
+    width: 100%;
+}
 
 
 </style>
@@ -355,10 +357,15 @@ margin: 20px;
 ملاحظة: المشكلة ليست في الرابط. إنه فقط  متصفح التطبيق لا يدعم جميع الميزات مثل المتصفح الرئيسي في هاتفك
 </p>
 
+<br>
 
 <div class="slidecontainer">
+  <p dir="rtl" style="padding: 10px;color: yellow;">سرعة النطق: <span id="demo"></span></p>
   <input type="range" min="1" max="10" value="9" class="slider" id="myRange">
-  <p>Speed: <span id="demo"></span></p>
+  <br><br>
+  <p dir="rtl" style="padding: 10px;color: yellow;">المتحدث: <span id="demo"></span></p>
+  <select id="voiceSelect"></select>
+  <br><br>
 </div>
 
 
@@ -2913,21 +2920,6 @@ Eat
 
 <!-- table end here -->
 
-<p>test1</p>
-<input type="button" value="testx" onclick="say1('throne',0)">
-<input type="button" value="test1" onclick="say1('throne',1)">
-<input type="button" value="test2" onclick="say1('throne',2)">
-<input type="button" value="test3" onclick="say1('throne',3)">
-<input type="button" value="test4" onclick="say1('throne',4)">
-<input type="button" value="test5" onclick="say1('throne',5)">
-<input type="button" value="test6" onclick="say1('throne',6)">
-<input type="button" value="test7" onclick="say1('throne',7)">
-<input type="button" value="test8" onclick="say1('throne',8)">
-<input type="button" value="test9" onclick="say1('throne',9)">
-<input type="button" value="test10" onclick="say1('throne',10)">
-
-
-<select id="voiceSelect"></select>
 
 
 <h2 dir="rtl" style="padding: 10px;" align="justify">
@@ -2948,7 +2940,7 @@ Eat
 
 <!-- table end here -->
 
-
+<h2 align="center" style="margin: 4px;" id="today">-- -- --</h2>
 </div>
 
 
@@ -2983,6 +2975,7 @@ function say(m) {
 
   var substring1 = "en-US";
   var substring2 = "en_US";
+  var list1 = document.getElementById("voiceSelect");
   
   //document.getElementById("today").innerHTML = voices[0].name() ;
   //console.log(window.speechSynthesis.getVoices());
@@ -2990,26 +2983,26 @@ function say(m) {
   var voices = window.speechSynthesis.getVoices();
   
   
-  
+  /*
     for(var i = 0; i < voices.length; i++) {
   	
 			if(voices[i].lang.indexOf(substring1) !== -1) {
 				msg.voice = voices[i];
 				//console.log(msg.voice);
-				msg.lang = substring1;
+				//msg.lang = substring1;
 			}
 			
 			if(voices[i].lang.indexOf(substring2) !== -1) {
-				msg.voice = voices[i];
+				//msg.voice = voices[i];
 				//console.log(msg.voice);
-				msg.lang = substring2;
+				//msg.lang = substring2;
 			}
 			//console.log(voices[i].lang);
 	}
+  */
   
   
-  
-  //msg.voice = voices[5];
+  msg.voice = voices[list1.value.substr(0, list1.value.indexOf('-'))];
   msg.voiceURI = "native";
   msg.volume = 1;
   msg.rate = slider.value/10;
@@ -3017,31 +3010,14 @@ function say(m) {
   msg.text = m;
   msg.lang = 'en-US';
   speechSynthesis.speak(msg);
-   
+  
+  document.getElementById("today").innerHTML = list1.value.substr(0, list1.value.indexOf('-'));
+   //var streetaddress= list1.value.substr(0, list1.value.indexOf(',')); 
   
 }
 
 
 
-function say1(m,n) {
-
-	//var slider = document.getElementById("myRange");
-	//var output = document.getElementById("demo");
-
-  var msg = new SpeechSynthesisUtterance();
-  var voices = window.speechSynthesis.getVoices();
-  
-
-  msg.voice = voices[n];
-  msg.voiceURI = "native";
-  msg.volume = 1;
-  msg.rate = slider.value/10;
-  msg.pitch = 1;
-  msg.text = m;
-  msg.lang = 'en-US';
-  speechSynthesis.speak(msg);
-   
-}
 
 
 var slider = document.getElementById("myRange");
@@ -3054,43 +3030,41 @@ slider.oninput = function() {
 
 
 
-
-
-
-
+var substring3 = "en";
 
 function populateVoiceList() {
   if(typeof speechSynthesis === 'undefined') {
     return;
   }
+  
 
   var voices = speechSynthesis.getVoices();
 
   for(var i = 0; i < voices.length; i++) {
-    var option = document.createElement('option');
-    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
-    
-    if(voices[i].default) {
-      option.textContent += ' -- DEFAULT';
-    }
+  
+		if(voices[i].lang.indexOf(substring3) !== -1) {
+			var option = document.createElement('option');
+			option.textContent = i + '-' + voices[i].name + ' (' + voices[i].lang + ')';
+			
+			//if(voices[i].default) {
+			 //option.textContent += ' -- DEFAULT';
+			//}
 
-    option.setAttribute('data-lang', voices[i].lang);
-    option.setAttribute('data-name', voices[i].name);
-    document.getElementById("voiceSelect").appendChild(option);
+			option.setAttribute('data-lang', voices[i].lang);
+			option.setAttribute('data-name', voices[i].name);
+			document.getElementById("voiceSelect").appendChild(option);
+		}
   }
 }
 
-populateVoiceList();
+
+//populateVoiceList();
+	//return;
+
+
 if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
-  speechSynthesis.onvoiceschanged = populateVoiceList;
+	speechSynthesis.onvoiceschanged = populateVoiceList;
 }
-
-
-
-
-
-
-
 
 
 
