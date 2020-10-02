@@ -259,6 +259,48 @@ margin: 20px;
 }
 
 
+
+
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+
+
+
+
 </style>
 </head>
 <body >
@@ -312,6 +354,15 @@ margin: 20px;
 <br><br>
 ملاحظة: المشكلة ليست في الرابط. إنه فقط  متصفح التطبيق لا يدعم جميع الميزات مثل المتصفح الرئيسي في هاتفك
 </p>
+
+
+<div class="slidecontainer">
+  <input type="range" min="1" max="10" value="9" class="slider" id="myRange">
+  <p>Speed: <span id="demo"></span></p>
+</div>
+
+
+
 </div>
 
 
@@ -2863,6 +2914,20 @@ Eat
 <!-- table end here -->
 
 <p>test1</p>
+<input type="button" value="test0" onclick="say1('test',0)">
+<input type="button" value="test1" onclick="say1('test',1)">
+<input type="button" value="test2" onclick="say1('test',2)">
+<input type="button" value="test3" onclick="say1('test',3)">
+<input type="button" value="test4" onclick="say1('test',4)">
+<input type="button" value="test5" onclick="say1('test',5)">
+<input type="button" value="test6" onclick="say1('test',6)">
+<input type="button" value="test7" onclick="say1('test',7)">
+<input type="button" value="test8" onclick="say1('test',8)">
+<input type="button" value="test9" onclick="say1('test',9)">
+<input type="button" value="test10" onclick="say1('test',10)">
+
+
+<select id="voiceSelect"></select>
 
 
 <h2 dir="rtl" style="padding: 10px;" align="justify">
@@ -2939,16 +3004,85 @@ function say(m) {
   //msg.voice = voices[5];
   msg.voiceURI = "native";
   msg.volume = 1;
-  msg.rate = 0.3;
+  msg.rate = slider.value/10;
   msg.pitch = 1;
   msg.text = m;
   //msg.lang = 'en-US';
   speechSynthesis.speak(msg);
-  
-  
-  
+   
   
 }
+
+
+
+function say1(m,n) {
+
+	//var slider = document.getElementById("myRange");
+	//var output = document.getElementById("demo");
+
+  var msg = new SpeechSynthesisUtterance();
+  var voices = window.speechSynthesis.getVoices();
+  
+
+  msg.voice = voices[n];
+  msg.voiceURI = "native";
+  msg.volume = 1;
+  msg.rate = slider.value/10;
+  msg.pitch = 1;
+  msg.text = m;
+  msg.lang = 'en-US';
+  speechSynthesis.speak(msg);
+   
+}
+
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value *10 +' %';
+
+slider.oninput = function() {
+  output.innerHTML = this.value *10 +' %';
+}
+
+
+
+
+
+
+
+
+function populateVoiceList() {
+  if(typeof speechSynthesis === 'undefined') {
+    return;
+  }
+
+  var voices = speechSynthesis.getVoices();
+
+  for(var i = 0; i < voices.length; i++) {
+    var option = document.createElement('option');
+    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+    
+    if(voices[i].default) {
+      option.textContent += ' -- DEFAULT';
+    }
+
+    option.setAttribute('data-lang', voices[i].lang);
+    option.setAttribute('data-name', voices[i].name);
+    document.getElementById("voiceSelect").appendChild(option);
+  }
+}
+
+populateVoiceList();
+if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
+  speechSynthesis.onvoiceschanged = populateVoiceList;
+}
+
+
+
+
+
+
+
 
 
 
