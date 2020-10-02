@@ -2910,22 +2910,23 @@ for (i = 0; i < coll.length; i++) {
 }
 
 
-  var msg = new SpeechSynthesisUtterance();
-  var voices = window.speechSynthesis.getVoices();
-  msg.voice = voices[0];
-  msg.voiceURI = "native";
-  msg.volume = 1;
-  msg.rate = 0.3;
-  msg.pitch = 1;
+  //var msg = new SpeechSynthesisUtterance();
+  //var voices = window.speechSynthesis.getVoices();
+ // msg.voice = voices[0];
+ // msg.voiceURI = "native";
+ // msg.volume = 1;
+//  msg.rate = 0.3;
+ // msg.pitch = 1;
 
 
 function say(m) {
 
   //document.getElementById("today").innerHTML = voices[0].name() ;
   //console.log(window.speechSynthesis.getVoices());
-  msg.text = m;
-  msg.lang = 'en-US';
-  speechSynthesis.speak(msg);
+  
+  //msg.text = m;
+  //msg.lang = 'en-US';
+  //speechSynthesis.speak(msg);
   
   
   
@@ -2937,9 +2938,8 @@ function populateVoiceList() {
   if(typeof speechSynthesis === 'undefined') {
     return;
   }
-
-  var voices = speechSynthesis.getVoices();
-
+  //var voices = speechSynthesis.getVoices();
+	var voices = window.speechSynthesis.getVoices();
   for(var i = 0; i < voices.length; i++) {
   
 	//if(voices[i].name.indexOf(substring) !== -1) {
