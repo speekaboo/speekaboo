@@ -24,6 +24,8 @@
 
 <meta property="og:url" content="https://speekaboo.com/d.html" />
 
+<script data-ad-client="ca-pub-1005888209614542" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 <style>
 * {
   box-sizing: border-box;
@@ -259,6 +261,47 @@ margin: 20px;
 }
 
 
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+
+select {
+    width: 100%;
+}
+
 </style>
 </head>
 <body >
@@ -304,16 +347,31 @@ D
 </button>
 <div class="contentxy">
 
-<p dir="rtl" style="padding: 10px;color: black;" align="justify">
+	<p dir="rtl" style="padding: 10px;" align="justify">
 
-١- تأكد من أن هاتفك غير صامت
+	١- تأكد من أن هاتفك غير صامت
+	<br>
+	٢- إذا وصلت إلى موقعنا من خلال فيسبوك، فأنت تستخدم متصفح التطبيق وليس متصفح الجوال الرئيسي. لذلك يجب عليك فتح الرابط الخاص بنا مباشرة من المتصفح الرئيسي على هاتفك. لأن متصفح التطبيق لا يدعم ميزة الصوت
+	<br>
+	٣- أو ببساطة شارك رابطنا مع صديقك على الواتساب ، ثم اضغط على الرابط. سيفتح واتساب رابطنا في متصفح الهاتف الرئيسي
+	<br><br>
+	ملاحظة: المشكلة ليست في الرابط. إنه فقط  متصفح التطبيق لا يدعم جميع الميزات مثل المتصفح الرئيسي في هاتفك
+	</p>
+
 <br>
-٢- إذا وصلت إلى موقعنا من خلال فيسبوك، فأنت تستخدم متصفح التطبيق وليس متصفح الجوال الرئيسي. لذلك يجب عليك فتح الرابط الخاص بنا مباشرة من المتصفح الرئيسي على هاتفك. لأن متصفح التطبيق لا يدعم ميزة الصوت
-<br>
-٣- أو ببساطة شارك رابطنا مع صديقك على الواتساب ، ثم اضغط على الرابط. سيفتح واتساب رابطنا في متصفح الهاتف الرئيسي
-<br><br>
-ملاحظة: المشكلة ليست في الرابط. إنه فقط  متصفح التطبيق لا يدعم جميع الميزات مثل المتصفح الرئيسي في هاتفك
-</p>
+
+	<div class="slidecontainer">
+	  <p dir="rtl" style="padding: 10px;color: yellow;">سرعة النطق: <span id="demo"></span></p>
+	  <input type="range" min="1" max="10" value="9" class="slider" id="myRange">
+	  <br><br>
+	  <p dir="rtl" style="padding: 10px;color: yellow;">المتحدث: <span id="demo"></span></p>
+	  <select id="voiceSelect"></select>
+	  <br><br>
+	  <p dir="rtl" style="padding: 10px;color: yellow;">جرب الصوت<span id="demo"></span></p>
+	  <input type="button" class="link1"  value="Hello world &#128266;" onclick="say('Hello world')">
+	  <br><br>
+	</div>
+
 </div>
 
 
@@ -3189,11 +3247,15 @@ D
 
 </div>
 
-
-
 <script>
+
 var coll = document.getElementsByClassName("collapsible");
 var i;
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+var substring3 = "en";
+
+output.innerHTML = slider.value *10 +' %';
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
@@ -3207,23 +3269,57 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-
 function say(m) {
 
+	if(typeof speechSynthesis === 'undefined') {
+    return;
+  }
 
+  var list1 = document.getElementById("voiceSelect");
   var msg = new SpeechSynthesisUtterance();
   var voices = window.speechSynthesis.getVoices();
-  msg.voice = voices[4];
+   
+  msg.voice = voices[ Number(list1.value.substr(0, list1.value.indexOf('-')))   ];
   msg.voiceURI = "native";
   msg.volume = 1;
-  msg.rate = 0.7;
+  msg.rate = slider.value/10;
   msg.pitch = 1;
   msg.text = m;
   msg.lang = 'en-US';
   speechSynthesis.speak(msg);
-  
 }
 
+slider.oninput = function() {
+  output.innerHTML = this.value *10 +' %';
+}
+
+function populateVoiceList() {
+  if(typeof speechSynthesis === 'undefined') {
+    return;
+  }
+  
+  var voices = speechSynthesis.getVoices();
+
+  document.getElementById("voiceSelect").innerHTML = '';
+  for(var i = 0; i < voices.length; i++) {
+  
+		if(voices[i].lang.indexOf(substring3) !== -1) {
+			var option = document.createElement('option');
+			option.textContent = i + '-' + voices[i].name + ' (' + voices[i].lang + ')';
+			
+
+			option.setAttribute('data-lang', voices[i].lang);
+			option.setAttribute('data-name', voices[i].name);
+			document.getElementById("voiceSelect").appendChild(option);
+		}
+  }
+}
+
+populateVoiceList();
+
+if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
+	speechSynthesis.onvoiceschanged = populateVoiceList;
+}
 
 </script>
 

@@ -24,6 +24,9 @@
 
 <meta property="og:url" content="https://speekaboo.com/words.html" />
 
+<script data-ad-client="ca-pub-1005888209614542" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
 <style>
 * {
   box-sizing: border-box;
@@ -346,29 +349,30 @@ select {
 </button>
 <div class="contentxy">
 
-<p dir="rtl" style="padding: 10px;" align="justify">
+	<p dir="rtl" style="padding: 10px;" align="justify">
 
-١- تأكد من أن هاتفك غير صامت
+	١- تأكد من أن هاتفك غير صامت
+	<br>
+	٢- إذا وصلت إلى موقعنا من خلال فيسبوك، فأنت تستخدم متصفح التطبيق وليس متصفح الجوال الرئيسي. لذلك يجب عليك فتح الرابط الخاص بنا مباشرة من المتصفح الرئيسي على هاتفك. لأن متصفح التطبيق لا يدعم ميزة الصوت
+	<br>
+	٣- أو ببساطة شارك رابطنا مع صديقك على الواتساب ، ثم اضغط على الرابط. سيفتح واتساب رابطنا في متصفح الهاتف الرئيسي
+	<br><br>
+	ملاحظة: المشكلة ليست في الرابط. إنه فقط  متصفح التطبيق لا يدعم جميع الميزات مثل المتصفح الرئيسي في هاتفك
+	</p>
+
 <br>
-٢- إذا وصلت إلى موقعنا من خلال فيسبوك، فأنت تستخدم متصفح التطبيق وليس متصفح الجوال الرئيسي. لذلك يجب عليك فتح الرابط الخاص بنا مباشرة من المتصفح الرئيسي على هاتفك. لأن متصفح التطبيق لا يدعم ميزة الصوت
-<br>
-٣- أو ببساطة شارك رابطنا مع صديقك على الواتساب ، ثم اضغط على الرابط. سيفتح واتساب رابطنا في متصفح الهاتف الرئيسي
-<br><br>
-ملاحظة: المشكلة ليست في الرابط. إنه فقط  متصفح التطبيق لا يدعم جميع الميزات مثل المتصفح الرئيسي في هاتفك
-</p>
 
-<br>
-
-<div class="slidecontainer">
-  <p dir="rtl" style="padding: 10px;color: yellow;">سرعة النطق: <span id="demo"></span></p>
-  <input type="range" min="1" max="10" value="9" class="slider" id="myRange">
-  <br><br>
-  <p dir="rtl" style="padding: 10px;color: yellow;">المتحدث: <span id="demo"></span></p>
-  <select id="voiceSelect"></select>
-  <br><br>
-</div>
-
-
+	<div class="slidecontainer">
+	  <p dir="rtl" style="padding: 10px;color: yellow;">سرعة النطق: <span id="demo"></span></p>
+	  <input type="range" min="1" max="10" value="9" class="slider" id="myRange">
+	  <br><br>
+	  <p dir="rtl" style="padding: 10px;color: yellow;">المتحدث: <span id="demo"></span></p>
+	  <select id="voiceSelect"></select>
+	  <br><br>
+	  <p dir="rtl" style="padding: 10px;color: yellow;">جرب الصوت<span id="demo"></span></p>
+	  <input type="button" class="link1"  value="Hello world &#128266;" onclick="say('Hello world')">
+	  <br><br>
+	</div>
 
 </div>
 
@@ -2948,15 +2952,11 @@ Eat
 
 var coll = document.getElementsByClassName("collapsible");
 var i;
-
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
-
 var substring3 = "en";
 
 output.innerHTML = slider.value *10 +' %';
-
-
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
@@ -2970,7 +2970,6 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-
 function say(m) {
 
 	if(typeof speechSynthesis === 'undefined') {
@@ -2978,12 +2977,9 @@ function say(m) {
   }
 
   var list1 = document.getElementById("voiceSelect");
-  
-
   var msg = new SpeechSynthesisUtterance();
   var voices = window.speechSynthesis.getVoices();
    
-  
   msg.voice = voices[ Number(list1.value.substr(0, list1.value.indexOf('-')))   ];
   msg.voiceURI = "native";
   msg.volume = 1;
@@ -2992,11 +2988,7 @@ function say(m) {
   msg.text = m;
   msg.lang = 'en-US';
   speechSynthesis.speak(msg);
-
 }
-
-
-
 
 slider.oninput = function() {
   output.innerHTML = this.value *10 +' %';
@@ -3007,7 +2999,6 @@ function populateVoiceList() {
     return;
   }
   
-
   var voices = speechSynthesis.getVoices();
 
   document.getElementById("voiceSelect").innerHTML = '';
