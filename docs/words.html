@@ -3002,7 +3002,7 @@ function say(m) {
   */
   
   
-  msg.voice = voices[list1.value.substr(0, list1.value.indexOf('-'))];
+  msg.voice = voices[ Number(list1.value.substr(0, list1.value.indexOf('-')))   ];
   msg.voiceURI = "native";
   msg.volume = 1;
   msg.rate = slider.value/10;
