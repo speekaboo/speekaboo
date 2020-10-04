@@ -20,9 +20,9 @@
 
 <meta property="og:type" content="website" />
 <meta property="og:title" content="كلمات انجليزي الأكثر شيوعا" />
-<meta property="og:description" content="B الكلمات الأكثر شيوعًا التي تبدأ بالحرف " />
+<meta property="og:description" content="B الكلمات الأكثر شيوعًا و استخداما في اللغة الانجليزية التي تبدأ بالحرف " />
 
-<meta name="Description" content="B الكلمات الأكثر شيوعًا التي تبدأ بالحرف ">
+<meta name="Description" content="B الكلمات الأكثر شيوعًا و استخداما في اللغة الانجليزية التي تبدأ بالحرف ">
 
 <meta property="og:url" content="https://speekaboo.com/b.html" />
 
@@ -128,7 +128,7 @@ td, th, tr, p {
 }
 
 .collapsible:after {
-  content: '\002B';
+  content: "\2212";
   color: white;
   font-weight: bold;
   float: left;
@@ -136,12 +136,12 @@ td, th, tr, p {
 }
 
 .active:after {
-  content: "\2212";
+  content: '\002B';
 }
 
 .contentxy {
   //padding: 0 18px;
-  //max-height: 0;
+  max-height: 5000px;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: #B4CCEB;
@@ -327,7 +327,7 @@ select {
 
 <h2 align="center">
 <br>
-الكلمات الأكثر شيوعًا التي تبدأ بالحرف
+الكلمات الأكثر شيوعًا و استخداما في اللغة الانجليزية التي تبدأ بالحرف
 
 <br>
 <span style="color: yellow;"><b>
@@ -3145,7 +3145,7 @@ B
 <button class="collapsible" style="background-color: blue;" >A الأكثر شيوعا</button>
 <div class="contentxy">
 <p dir="rtl" style="padding: 30px;color: black;" align="justify">
-الكلمات الأكثر شيوعًا التي تبدأ بالحرف
+الكلمات الأكثر شيوعًا و استخداما في اللغة الانجليزية التي تبدأ بالحرف
 <span style="color: red;"><b>
 A
 </b></span>
@@ -3164,7 +3164,7 @@ A
 <button class="collapsible" style="background-color: blue;" >B الأكثر شيوعا</button>
 <div class="contentxy">
 <p dir="rtl" style="padding: 30px;color: black;" align="justify">
-الكلمات الأكثر شيوعًا التي تبدأ بالحرف
+الكلمات الأكثر شيوعًا و استخداما في اللغة الانجليزية التي تبدأ بالحرف
 <span style="color: red;"><b>
 B
 </b></span>
@@ -3182,7 +3182,7 @@ B
 <button class="collapsible" style="background-color: blue;" >C الأكثر شيوعا</button>
 <div class="contentxy">
 <p dir="rtl" style="padding: 30px;color: black;" align="justify">
-الكلمات الأكثر شيوعًا التي تبدأ بالحرف
+الكلمات الأكثر شيوعًا و استخداما في اللغة الانجليزية التي تبدأ بالحرف
 <span style="color: red;"><b>
 C
 </b></span>
@@ -3200,7 +3200,7 @@ C
 <button class="collapsible" style="background-color: blue;" >D الأكثر شيوعا</button>
 <div class="contentxy">
 <p dir="rtl" style="padding: 30px;color: black;" align="justify">
-الكلمات الأكثر شيوعًا التي تبدأ بالحرف
+الكلمات الأكثر شيوعًا و استخداما في اللغة الانجليزية التي تبدأ بالحرف
 <span style="color: red;"><b>
 D
 </b></span>
@@ -3261,10 +3261,10 @@ for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
+    if (content.style.maxHeight == "0px"){
+      content.style.maxHeight = "5000px";
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+      content.style.maxHeight =   "0px";
     } 
   });
 }

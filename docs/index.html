@@ -140,7 +140,7 @@ td, th, tr, p {
 }
 
 .collapsible:after {
-  content: '\002B';
+  content: "\2212";
   color: white;
   font-weight: bold;
   float: left;
@@ -148,12 +148,12 @@ td, th, tr, p {
 }
 
 .active:after {
-  content: "\2212";
+  content: '\002B';
 }
 
 .contentxy {
   //padding: 0 18px;
-  //max-height: 0;
+  max-height: 5000px;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: #002044;
@@ -671,7 +671,7 @@ select {
 </button>
 <div class="contentxy">
 <p dir="rtl" style="padding: 30px;" align="justify">
-الكلمات الأكثر شيوعًا التي تبدأ بالحرف
+الكلمات الأكثر شيوعًا و استخداما في اللغة الانجليزية التي تبدأ بالحرف
 A
 <br>
 </p>
@@ -690,7 +690,7 @@ A
 </button>
 <div class="contentxy">
 <p dir="rtl" style="padding: 30px;" align="justify">
-الكلمات الأكثر شيوعًا التي تبدأ بالحرف
+الكلمات الأكثر شيوعًا و استخداما في اللغة الانجليزية التي تبدأ بالحرف
 B
 <br>
 </p>
@@ -709,7 +709,7 @@ B
 </button>
 <div class="contentxy">
 <p dir="rtl" style="padding: 30px;" align="justify">
-الكلمات الأكثر شيوعًا التي تبدأ بالحرف
+الكلمات الأكثر شيوعًا و استخداما في اللغة الانجليزية التي تبدأ بالحرف
 C
 <br>
 </p>
@@ -728,7 +728,7 @@ C
 </button>
 <div class="contentxy">
 <p dir="rtl" style="padding: 30px;" align="justify">
-الكلمات الأكثر شيوعًا التي تبدأ بالحرف
+الكلمات الأكثر شيوعًا و استخداما في اللغة الانجليزية التي تبدأ بالحرف
 D
 <br>
 </p>
@@ -896,10 +896,10 @@ for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
+    if (content.style.maxHeight == "0px"){
+      content.style.maxHeight = "5000px";
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+      content.style.maxHeight =   "0px";
     } 
   });
 }

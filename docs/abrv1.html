@@ -22,7 +22,8 @@
 <meta property="og:title" content="الاختصارات - الصفحة الأولى" />
 <meta property="og:description" content="الاختصارات هي أشكال مختصرة من الكلمات أو عبارات طويلة. ستجدهم في كل تخصص ومجال من مجالات الحياة تقريبًا ، من الاختصارات الشائعة الاستخدام في الأسماء أو الألقاب" />
 
-<meta name="Description" content="الاختصارات هي أشكال مختصرة من الكلمات أو عبارات طويلة. ستجدهم في كل تخصص ومجال من مجالات الحياة تقريبًا ، من الاختصارات الشائعة الاستخدام في الأسماء أو الألقاب">
+<meta name="Description" content="كلمات مختصرة بالانجليزي
+الاختصارات هي أشكال مختصرة من الكلمات أو عبارات طويلة. ستجدهم في كل تخصص ومجال من مجالات الحياة تقريبًا ، من الاختصارات الشائعة الاستخدام في الأسماء أو الألقاب">
 
 <meta property="og:url" content="https://speekaboo.com/abrv1.html" />
 
@@ -128,7 +129,7 @@ td, th, tr, p {
 }
 
 .collapsible:after {
-  content: '\002B';
+  content: "\2212";
   color: white;
   font-weight: bold;
   float: left;
@@ -136,12 +137,12 @@ td, th, tr, p {
 }
 
 .active:after {
-  content: "\2212";
+  content: '\002B';
 }
 
 .contentxy {
   //padding: 0 18px;
-  //max-height: 0;
+  max-height: 5000px;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: #002044;
@@ -329,6 +330,8 @@ select {
 <h2 align="center">
 <br>
 الاختصارات
+<br>
+كلمات مختصرة بالانجليزي
 <br>
 <span style="color: yellow;"><b>
 Abbreviations
@@ -1715,10 +1718,10 @@ for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
+    if (content.style.maxHeight == "0px"){
+      content.style.maxHeight = "5000px";
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+      content.style.maxHeight =   "0px";
     } 
   });
 }
