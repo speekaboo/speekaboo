@@ -1,0 +1,2990 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+
+<title>حفظ الكلمات الانجليزية</title>
+
+
+<link rel="icon" 
+      type="image/png" 
+      href="https://speekaboo.com/Favicon.ico">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:image" content="https://speekaboo.com/img/safbshare2.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image" content="https://speekaboo.com/img/sawpshare.png" />
+<meta property="og:image:width" content="300" />
+<meta property="og:image:height" content="300" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="حفظ الكلمات" />
+<meta property="og:description" content="طريقة جديدة لحفظ الكلمات عن طريق اختيار كلمات متشابهة لها نفس التهجئة أو أحرف مشتركة" />
+
+<meta name="Description" content="طريقة جديدة لحفظ الكلمات عن طريق اختيار كلمات متشابهة لها نفس التهجئة أو أحرف مشتركة">
+
+<meta property="og:url" content="https://speekaboo.com/words.html" />
+
+
+<meta name="keywords" content="حفظ الكلمات الإنجليزية ، كلمات متشابهة">
+<meta name="author" content="speekaboo.com">
+<meta name="copyright" content="Copyright © 2021 speekaboo.com">
+<meta name="robots" content="index,follow,all">
+<meta name="distribution" content="global">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:site_name" content="حفظ الكلمات الانجليزية">
+
+
+
+<script data-ad-client="ca-pub-1005888209614542" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 8px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+/*end of welcome ads*/
+.mainframe {
+  max-width: 500px;
+  margin: auto;
+  background-color: #002060;
+  color: white;
+  margin-top : 60px;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px ;
+  margin: auto;
+  font-size: 24px;
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.link1 {
+  display: block;
+  //padding: 14px 28px;
+  background-color: black;
+  color: white;
+  //float: right;
+  //border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px ;
+  margin: auto;
+  font-size: 20px;
+  width: 45%;
+  text-align: center;
+  text-decoration: none;
+  //border: 4px solid green;
+  border-radius: 15px;
+  
+  
+}
+
+
+table {
+  padding: 2px;
+}
+
+td, th, tr, p {
+  
+  padding: 0px;
+  margin: 2px;
+  
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: right;
+  outline: none;
+  font-size: 24px;
+  border: 8px solid #002060;
+  border-radius: 20px;
+  
+}
+
+.active, .collapsible:hover {
+  background-color: green;
+  border-radius: 20px;
+}
+
+.collapsible:after {
+  content: "\002B";
+  color: white;
+  font-weight: bold;
+  float: left;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: '\2212';
+}
+
+.contentxy {
+  //padding: 0 18px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #002044;
+  width: 92%;
+  //border: 2px solid white;
+  margin: auto;
+  //margin-top: -16px;
+  //padding-top: -16px;
+  border-radius: 20px;
+}
+
+
+.subcir {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #fff;
+  line-height: 90px;
+  text-align: center;
+  background: #002044;
+  //border: 2px solid #002044;
+  margin: auto;
+  margin-top: 8px;
+}
+
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+
+.row {
+//padding: 20px;
+margin: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 72%; height: 18px; background-color: #4CAF50;}
+.bar-4 {width: 14.6%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 9.4%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 1.5%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 2.5%; height: 18px; background-color: #f44336;}
+
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 500px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+
+
+.topright {
+  float: right;
+  text-decoration: none;
+  background-color: #002044;
+  //border: 3px solid gray;
+  border-radius: 5px;
+  color: #fff;
+  //padding-right: 10px;
+  //padding-left: 10px;
+  padding: 10px;
+  height: 50px;
+  font-size: 24px;
+  margin-top: -50px;
+  
+}
+
+.topleft {
+  float: left;
+  text-decoration: none;
+  background-color: #DA016A;
+  //border: 3px solid gray;
+  border-radius: 5px;
+  color: #fff;
+  //padding-right: 10px;
+  //padding-left: 10px;
+  padding: 10px;
+  height: 50px;
+  font-size: 24px;
+  width: 100%;
+}
+
+
+
+
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+
+select {
+    width: 100%;
+}
+
+input {
+
+	width: 48px;
+	height: 48px;
+	margin: 4px;
+	padding: 4px;
+
+}
+
+
+</style>
+</head>
+<body >
+
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<script async src="https://cse.google.com/cse.js?cx=63badd37557a0e137"></script>
+<div class="gcse-search"></div>
+
+<span class="topleft">SpeekAboo</span>
+<a class="topright" href="index.html">
+الرئيسية
+&#127968;
+</a>
+
+
+</div>
+
+
+ <!-- calculator here --> 
+<div class="mainframe">
+
+<h1 align="center">
+<br>
+حفظ الكلمات
+</h1>
+
+<p dir="rtl" style="padding: 30px;" align="justify">
+طريقة جديدة لحفظ الكلمات عن طريق اختيار كلمات متشابهة لها نفس التهجئة أو أحرف مشتركة. 
+<br>
+</p>
+
+
+<!-- speekaboo ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1005888209614542"
+     data-ad-slot="4741866610"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!-- table start here -->
+
+
+<button class="collapsible" style="background-color: red;" >
+تعليمات تفعيل الصوت
+&#128266;
+</button>
+<div class="contentxy">
+
+	<p dir="rtl" style="padding: 10px;" align="justify">
+
+	١- تأكد من أن هاتفك غير صامت
+	<br>
+	٢- إذا وصلت إلى موقعنا من خلال فيسبوك، فأنت تستخدم متصفح التطبيق وليس متصفح الجوال الرئيسي. لذلك يجب عليك فتح الرابط الخاص بنا مباشرة من المتصفح الرئيسي على هاتفك. لأن متصفح التطبيق لا يدعم ميزة الصوت
+	<br>
+	٣- أو ببساطة شارك رابطنا مع صديقك على الواتساب ، ثم اضغط على الرابط. سيفتح واتساب رابطنا في متصفح الهاتف الرئيسي
+	<br><br>
+	ملاحظة: المشكلة ليست في الرابط. إنه فقط  متصفح التطبيق لا يدعم جميع الميزات مثل المتصفح الرئيسي في هاتفك
+	</p>
+
+<br>
+
+	<div class="slidecontainer">
+	  <label for="myRange" dir="rtl" style="padding: 10px;color: yellow;float:right;">سرعة النطق: <span id="demo"></span></label>
+	  <input type="range" min="1" max="10" value="9" class="slider" id="myRange">
+	  <br><br>
+	  <label for="voiceSelect" dir="rtl" style="padding: 10px;color: yellow;float:right;">المتحدث:</label>
+	  <select id="voiceSelect"></select>
+	  <br><br>
+	  <p dir="rtl" style="padding: 10px;color: yellow;">جرب الصوت<span id="demo"></span></p>
+	  <input type="button" class="link1"  value="Hello world &#128266;" onclick="say('Hello world')">
+	  <br><br>
+	</div>
+
+</div>
+
+
+<button class="collapsible">
+One
+واحد</button>
+<div class="contentxy">
+<table style="width:100%">
+ <tr >
+  <td  colspan=2 style='border:solid black 1.0pt;
+  background:white;'>
+  <p  align=center style='
+  text-align:center;'><b><span style='font-size:18.0pt;
+  
+  color:blue;'>ONE</span></b></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>ONE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('one')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>واحد</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>B</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ONE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('bone')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>عظم</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>N</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ONE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('none')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>لا شيء</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>Z</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ONE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('zone')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>منطقة</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>ST</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ONE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('stone')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>حصاة</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>AL</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ONE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('alone')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>وحيد</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>H</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ONE</span><span
+  style='font-size:14.0pt;
+  color:black;'>Y</span> <input type="button" style="float: right;" value="&#128266" onclick="say('honey')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>عسل</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>THR</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ONE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('throne')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>عرش</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>H</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ONE</span><span
+  style='font-size:14.0pt;
+  color:black;'>ST</span> <input type="button" style="float: right;" value="&#128266" onclick="say('honest')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>صادق</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>L</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ONE</span><span
+  style='font-size:14.0pt;
+  color:black;'>LY</span> <input type="button" style="float: right;" value="&#128266" onclick="say('lonely')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>وحيد</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>L</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ONE</span><span
+  style='font-size:14.0pt;
+  color:black;'>SOME</span> <input type="button" style="float: right;" value="&#128266" onclick="say('lonesome')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>مهجور</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+<button class="collapsible">
+Ten
+عشرة</button>
+<div class="contentxy">
+<table style="width:100%">
+ <tr >
+  <td  colspan=2 style='border:solid black 1.0pt;
+  background:white;'>
+  <p  align=center style='
+  text-align:center;'><b><span style='font-size:18.0pt;
+  
+  color:blue;'>TEN</span></b><b></b></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>TEN</span> <input type="button" style="float: right;" value="&#128266" onclick="say('ten')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>عشرة</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>TEN</span><span style='font-size:14.0pt;
+  
+  color:black;'>T</span> <input type="button" style="float: right;" value="&#128266" onclick="say('tent')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>خيمة</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>TEN</span><span style='font-size:14.0pt;
+  
+  color:black;'>D</span> <input type="button" style="float: right;" value="&#128266" onclick="say('tend')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>تميل</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>OF</span><span
+  style='font-size:14.0pt;
+  color:blue;'>TEN</span> <input type="button" style="float: right;" value="&#128266" onclick="say('often')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>غالبا</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>EX</span><span
+  style='font-size:14.0pt;
+  color:blue;'>TEN</span><span
+  style='font-size:14.0pt;
+  color:black;'>T</span> <input type="button" style="float: right;" value="&#128266" onclick="say('extent')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>مدى</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>EX</span><span
+  style='font-size:14.0pt;
+  color:blue;'>TEN</span><span
+  style='font-size:14.0pt;
+  color:black;'>D</span> <input type="button" style="float: right;" value="&#128266" onclick="say('extend')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>تمديد</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>AT</span><span
+  style='font-size:14.0pt;
+  color:blue;'>TEN</span><span
+  style='font-size:14.0pt;
+  color:black;'>D</span> <input type="button" style="float: right;" value="&#128266" onclick="say('attend')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>حضر</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>IN</span><span
+  style='font-size:14.0pt;
+  color:blue;'>TEN</span><span
+  style='font-size:14.0pt;
+  color:black;'>T</span> <input type="button" style="float: right;" value="&#128266" onclick="say('intent')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>نوايا</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>KIT</span><span
+  style='font-size:14.0pt;
+  color:blue;'>TEN</span> <input type="button" style="float: right;" value="&#128266" onclick="say('kitten')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>قطه
+  صغيرة</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>TEN</span><span style='font-size:14.0pt;
+  
+  color:black;'>NIS</span> <input type="button" style="float: right;" value="&#128266" onclick="say('tennis')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>تنس</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>LIS</span><span
+  style='font-size:14.0pt;
+  color:blue;'>TEN</span> <input type="button" style="float: right;" value="&#128266" onclick="say('listen')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>استمع, أصغى, نصت</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+<button class="collapsible">
+Land
+أرض</button>
+<div class="contentxy">
+<table style="width:100%">
+ <tr >
+  <td  colspan=2 style='border:solid black 1.0pt;
+  background:white;'>
+  <p  align=center style='
+  text-align:center;'><b><span style='font-size:18.0pt;
+  
+  color:blue;'>LAND</span></b><b></b></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>LAND</span> <input type="button" style="float: right;" value="&#128266" onclick="say('land')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>أرض</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>LAND</span><span style='font-size:
+  14.0pt;
+  color:black;'>ING</span> <input type="button" style="float: right;" value="&#128266" onclick="say('landing')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>الهبوط</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>LAND</span><span style='font-size:
+  14.0pt;
+  color:black;'>LINE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('landline')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>هاتف ارضي</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>LAND </span><span style='font-size:
+  14.0pt;
+  color:black;'>MINE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('land mine')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>لغم أرضي</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>LAND</span><span style='font-size:
+  14.0pt;
+  color:black;'>MASS</span> <input type="button" style="float: right;" value="&#128266" onclick="say('landmass')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>اليابسة</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>LAND</span><span style='font-size:
+  14.0pt;
+  color:black;'>SLIDE</span>  <input type="button" style="float: right;" value="&#128266" onclick="say('landslide')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>انهيار أرضي</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>LAND</span><span style='font-size:
+  14.0pt;
+  color:black;'>MARK</span> <input type="button" style="float: right;" value="&#128266" onclick="say('landmark')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>نقطة
+  الإستدلال</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>LAND</span><span style='font-size:
+  14.0pt;
+  color:black;'>LORD</span> <input type="button" style="float: right;" value="&#128266" onclick="say('landlord')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>صاحب
+  المكان</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>LAND</span><span style='font-size:
+  14.0pt;
+  color:black;'>SCAPE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('landscape')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>المناظر
+  الطبيعيه</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+<button class="collapsible">
+Use
+استعمال</button>
+<div class="contentxy">
+<table style="width:100%">
+ <tr >
+  <td  colspan=2 style='border:solid black 1.0pt;
+  background:white;'>
+  <p  align=center style='
+  text-align:center;'><b><span style='font-size:18.0pt;
+  
+  color:blue;'>USE</span></b></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>USE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('use')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>استعمال,&nbsp;فائدة,&nbsp;نفع</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>CA</span><span
+  style='font-size:14.0pt;
+  color:blue;'>USE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('cause')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>سبب</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>AB</span><span
+  style='font-size:14.0pt;
+  color:blue;'>USE</span>  <input type="button" style="float: right;" value="&#128266" onclick="say('abuse')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>إساءة</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>HO</span><span
+  style='font-size:14.0pt;
+  color:blue;'>USE</span>  <input type="button" style="float: right;" value="&#128266" onclick="say('house')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>منزل</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>MO</span><span
+  style='font-size:14.0pt;
+  color:blue;'>USE</span>  <input type="button" style="float: right;" value="&#128266" onclick="say('mouse')">  </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>الفأر</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>RE</span><span
+  style='font-size:14.0pt;
+  color:blue;'>USE</span>  <input type="button" style="float: right;" value="&#128266" onclick="say('reuse')">  </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>إعادة استخدام</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>AM</span><span
+  style='font-size:14.0pt;
+  color:blue;'>USE</span>  <input type="button" style="float: right;" value="&#128266" onclick="say('amuse')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>يسلى</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>EXC</span><span
+  style='font-size:14.0pt;
+  color:blue;'>USE</span>  <input type="button" style="float: right;" value="&#128266" onclick="say('excuse')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>عذر</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>ACC</span><span
+  style='font-size:14.0pt;
+  color:blue;'>USE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('accuse')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>اتهم</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>REF</span><span
+  style='font-size:14.0pt;
+  color:blue;'>USE</span>  <input type="button" style="float: right;" value="&#128266" onclick="say('refuse')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>رفض</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>CONF</span><span
+  style='font-size:14.0pt;
+  color:blue;'>USE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('confuse')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>ارتبك</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+
+
+
+
+<!-- speekaboo ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1005888209614542"
+     data-ad-slot="4741866610"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+
+
+
+
+<button class="collapsible">
+Water
+ماء</button>
+<div class="contentxy">
+<table style="width:100%">
+ <tr >
+  <td  colspan=2 style='border:solid black 1.0pt;
+  background:white;'>
+  <p  align=center style='
+  text-align:center;'><b><span style='font-size:18.0pt;
+  
+  color:blue;'>WATER</span></b><b></b></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>WATER</span> <input type="button" style="float: right;" value="&#128266" onclick="say('water')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>ماء</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>WATER</span><span style='font-size:
+  14.0pt;
+  color:black;'>FALL</span> <input type="button" style="float: right;" value="&#128266" onclick="say('waterfall')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>شلال</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>WATER</span><span style='font-size:
+  14.0pt;
+  color:black;'>FRONT</span> <input type="button" style="float: right;" value="&#128266" onclick="say('waterfront')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>الواجهة البحرية</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>WATER</span><span style='font-size:
+  14.0pt;
+  color:black;'>POWER</span> <input type="button" style="float: right;" value="&#128266" onclick="say('waterpower')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>قوة الماء</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>WATER</span><span style='font-size:
+  14.0pt;
+  color:black;'>MELON</span> <input type="button" style="float: right;" value="&#128266" onclick="say('watermelon')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>البطيخ</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>WATER</span><span style='font-size:
+  14.0pt;
+  color:black;'>COLORS</span> <input type="button" style="float: right;" value="&#128266" onclick="say('watercolors')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>الألوان
+  المائية</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>WATER</span><span style='font-size:
+  14.0pt;
+  color:black;'>PROOF</span> <input type="button" style="float: right;" value="&#128266" onclick="say('waterproof')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>ضد للماء</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>WATER</span><span style='font-size:
+  14.0pt;
+  color:black;'>MARK</span> <input type="button" style="float: right;" value="&#128266" onclick="say('watermark')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>علامة
+  مائية</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>ROSE</span><span
+  style='font-size:14.0pt;
+  color:blue;'>WATER</span> <input type="button" style="float: right;" value="&#128266" onclick="say('rosewater')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>ماء الورد</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>GROUND</span><span
+  style='font-size:14.0pt;
+  color:blue;'>WATER</span> <input type="button" style="float: right;" value="&#128266" onclick="say('groundwater')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>المياه
+  الجوفية</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>WATER</span><span style='font-size:
+  14.0pt;
+  color:black;'>LOGGED</span> <input type="button" style="float: right;" value="&#128266" onclick="say('waterlogged')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>مشبع
+  بالماء</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+<button class="collapsible">
+Rain
+تمطر</button>
+<div class="contentxy">
+<table style="width:100%">
+ <tr >
+  <td  colspan=2 style='border:solid black 1.0pt;
+  background:white;'>
+  <p  align=center style='
+  text-align:center;'><b><span style='font-size:18.0pt;
+  
+  color:blue;'>RAIN</span></b></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>RAIN</span> <input type="button" style="float: right;" value="&#128266" onclick="say('rain')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>تمطر</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>B</span><span
+  style='font-size:14.0pt;
+  color:blue;'>RAIN</span> <input type="button" style="float: right;" value="&#128266" onclick="say('brain')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>الدماغ</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>G</span><span
+  style='font-size:14.0pt;
+  color:blue;'>RAIN</span><span
+  style='font-size:14.0pt;
+  color:black;'>S</span> <input type="button" style="float: right;" value="&#128266" onclick="say('grains')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>بقوليات</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>T</span><span
+  style='font-size:14.0pt;
+  color:blue;'>RAIN</span> <input type="button" style="float: right;" value="&#128266" onclick="say('train')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>قطار</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>T</span><span
+  style='font-size:14.0pt;
+  color:blue;'>RAIN</span><span
+  style='font-size:14.0pt;
+  color:black;'>ER</span> <input type="button" style="float: right;" value="&#128266" onclick="say('trainer')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>مدرب</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>T</span><span
+  style='font-size:14.0pt;
+  color:blue;'>RAIN</span><span
+  style='font-size:14.0pt;
+  color:black;'>EE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('trainee')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>المتدرب</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>RAIN</span><span style='font-size:14.0pt;
+  
+  color:black;'>BOW</span> <input type="button" style="float: right;" value="&#128266" onclick="say('rainbow')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>قوس قزح</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>RAIN</span><span style='font-size:14.0pt;
+  
+  color:black;'>FALL</span> <input type="button" style="float: right;" value="&#128266" onclick="say('rainfall')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>كمية
+  المطر</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>RAIN</span><span style='font-size:14.0pt;
+  
+  color:black;'>FOREST</span> <input type="button" style="float: right;" value="&#128266" onclick="say('rainforest')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>غابه استوائيه</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>B</span><span
+  style='font-size:14.0pt;
+  color:blue;'>RAIN</span><span
+  style='font-size:14.0pt;
+  color:black;'>WAVE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('brainwave')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>فكرة
+  رائعة</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+<button class="collapsible">
+Ice
+جليد</button>
+<div class="contentxy">
+<table style="width:100%">
+ <tr >
+  <td  colspan=2 style='border:solid black 1.0pt;
+  background:white;'>
+  <p  align=center style='
+  text-align:center;'><b><span style='font-size:18.0pt;
+  
+  color:blue;'>ICE</span></b><b></b></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>ICE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('ice')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>جليد,&nbsp;ثلج,&nbsp;برود</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>N</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ICE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('nice')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>لطيف</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>VO</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ICE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('voice')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>صوت</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>SL</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ICE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('slice')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>شريحة</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>PR</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ICE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('price')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>سعر,&nbsp;ثمن</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>JU</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ICE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('juice')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>عصير</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>TW</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ICE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('twice')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>مرتين,&nbsp;ضعف</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>OFF</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ICE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('office')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>مكتب. مقر. مركز</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>ADV</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ICE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('advice')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>نصيحة,&nbsp;مشورة</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>DEV</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ICE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('device')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>جهاز</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>SERV</span><span
+  style='font-size:14.0pt;
+  color:blue;'>ICE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('service')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>خدمة</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+<button class="collapsible">
+Man
+رجل</button>
+<div class="contentxy">
+<table style="width:100%">
+ <tr >
+  <td  colspan=2 style='border:solid black 1.0pt;
+  background:white;'>
+  <p  align=center style='
+  text-align:center;'><b><span style='font-size:18.0pt;
+  
+  color:blue;'>MAN</span></b></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>MAN</span> <input type="button" style="float: right;" value="&#128266" onclick="say('man')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>رجل</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>MAN</span><span style='font-size:14.0pt;
+  
+  color:black;'>Y</span> <input type="button" style="float: right;" value="&#128266" onclick="say('many')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>كثير</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>MAN</span><span style='font-size:14.0pt;
+  
+  color:black;'>GO</span> <input type="button" style="float: right;" value="&#128266" onclick="say('mango')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>مانجو فاكهة</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>MAN</span><span style='font-size:14.0pt;
+  
+  color:black;'>NER</span> <input type="button" style="float: right;" value="&#128266" onclick="say('manner')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>طريقة,&nbsp;أسلوب,&nbsp;منهج</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>MAN</span><span style='font-size:14.0pt;
+  
+  color:black;'>IAC</span> <input type="button" style="float: right;" value="&#128266" onclick="say('maniac')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>معتوه</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>MAN</span><span style='font-size:14.0pt;
+  
+  color:black;'>UAL</span> <input type="button" style="float: right;" value="&#128266" onclick="say('manual')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>كتيب</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>MAN</span><span style='font-size:14.0pt;
+  
+  color:black;'>DATE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('mandate')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>تفويض,&nbsp;انتداب,&nbsp;أمر
+  رسمي,&nbsp;وصاية</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>MAN</span><span style='font-size:14.0pt;
+  
+  color:black;'>HOOD</span> <input type="button" style="float: right;" value="&#128266" onclick="say('manhood')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>رجولة</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>MAN</span><span style='font-size:14.0pt;
+  
+  color:black;'>OEUVRE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('manoeuvre')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>المناورة</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>MAN</span><span style='font-size:14.0pt;
+  
+  color:black;'>ICURE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('manicure')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>صباغة
+  الاظافر</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>MAN</span><span style='font-size:14.0pt;
+  
+  color:black;'>DATORY</span> <input type="button" style="float: right;" value="&#128266" onclick="say('mandatory')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>إلزامي</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+
+<button class="collapsible">
+Car
+سيارة</button>
+<div class="contentxy">
+ 
+	<table style="width:100%">
+		<tr >
+			<td colspan=2 style='border:solid black 1.0pt; background:white;'>
+				<p align=center style='text-align:center;'>
+					<b>
+						<span style='font-size:18.0pt;color:blue;'>CAR</span>
+					</b>
+				</p>
+			</td>
+		</tr>
+		
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>CAR</span> <input type="button" style="float: right;" value="&#128266" onclick="say('CAR')"> </p>
+  
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>سيارة</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>CAR</span><span style='font-size:14.0pt;
+  
+  color:black;'>E</span> <input type="button" style="float: right;" value="&#128266" onclick="say('care')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>رعاية,&nbsp;عناية , اهتم</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>CAR</span><span style='font-size:14.0pt;
+  
+  color:black;'>D</span> <input type="button" style="float: right;" value="&#128266" onclick="say('card')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>بطاقة</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>CAR</span><span style='font-size:14.0pt;
+  
+  color:black;'>RY</span> <input type="button" style="float: right;" value="&#128266" onclick="say('carry')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>حمل</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>CAR</span><span style='font-size:14.0pt;
+  
+  color:black;'>GO</span> <input type="button" style="float: right;" value="&#128266" onclick="say('cargo')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>البضائع</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>CAR</span><span style='font-size:14.0pt;
+  
+  color:black;'>VE</span> <input type="button" style="float: right;" value="&#128266" onclick="say('carve')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>نحت,&nbsp;نقش,&nbsp;حفر</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>CAR</span><span style='font-size:14.0pt;
+  
+  color:black;'>ROT</span> <input type="button" style="float: right;" value="&#128266" onclick="say('carrot')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>جزرة</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>CAR</span><span style='font-size:14.0pt;
+  
+  color:black;'>EER</span> <input type="button" style="float: right;" value="&#128266" onclick="say('career')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>مسار مهني مسار وظيفي</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>CAR</span><span style='font-size:14.0pt;
+  
+  color:black;'>EFUL</span> <input type="button" style="float: right;" value="&#128266" onclick="say('careful')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>حذر,&nbsp;متحفظ,&nbsp;محترس</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>CAR</span><span style='font-size:14.0pt;
+  
+  color:black;'>AVAN</span> <input type="button" style="float: right;" value="&#128266" onclick="say('caravan')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>المنزل المتنقل</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>CAR</span><span style='font-size:14.0pt;
+  
+  color:black;'>DBOARD</span> <input type="button" style="float: right;" value="&#128266" onclick="say('cardboard')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>ورق مقوى</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+<button class="collapsible">
+Eat
+أكل</button>
+<div class="contentxy">
+<table style="width:100%">
+ <tr >
+  <td  colspan=2 style='border:solid black 1.0pt;
+  background:white;'>
+  <p  align=center style='
+  text-align:center;'><b><span style='font-size:18.0pt;
+  
+  color:blue;'>EAT</span></b><b></b></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:blue;'>EAT</span> <input type="button" style="float: right;" value="&#128266" onclick="say('eat')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>أكل</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>B</span><span
+  style='font-size:14.0pt;
+  color:blue;'>EAT</span> <input type="button" style="float: right;" value="&#128266" onclick="say('beat')">  </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>تغلب</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>H</span><span
+  style='font-size:14.0pt;
+  color:blue;'>EAT</span> <input type="button" style="float: right;" value="&#128266" onclick="say('heat')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>الحرارة</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>S</span><span
+  style='font-size:14.0pt;
+  color:blue;'>EAT</span> <input type="button" style="float: right;" value="&#128266" onclick="say('seat')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>مقعد</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>N</span><span
+  style='font-size:14.0pt;
+  color:blue;'>EAT</span> <input type="button" style="float: right;" value="&#128266" onclick="say('neat')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>أنيق,&nbsp;ظريف,&nbsp;متأنق</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>M</span><span
+  style='font-size:14.0pt;
+  color:blue;'>EAT</span> <input type="button" style="float: right;" value="&#128266" onclick="say('meat')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>لحم</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>CH</span><span
+  style='font-size:14.0pt;
+  color:blue;'>EAT</span> <input type="button" style="float: right;" value="&#128266" onclick="say('cheat')">  </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>غش</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>CL</span><span
+  style='font-size:14.0pt;
+  color:blue;'>EAT</span> <input type="button" style="float: right;" value="&#128266" onclick="say('cleat')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>وتد</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>BL</span><span
+  style='font-size:14.0pt;
+  color:blue;'>EAT</span> <input type="button" style="float: right;" value="&#128266" onclick="say('bleat')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>ثغاء</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>TR</span><span
+  style='font-size:14.0pt;
+  color:blue;'>EAT</span> <input type="button" style="float: right;" value="&#128266" onclick="say('treat')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:white;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>يعالج</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td  style='border:solid black 1.0pt;border-top:none;
+  background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span style='font-size:14.0pt;
+  
+  color:black;'>WH</span><span
+  style='font-size:14.0pt;
+  color:blue;'>EAT</span> <input type="button" style="float: right;" value="&#128266" onclick="say('wheat')"> </p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;background:#EFF3EA;
+  '>
+  <p  align=center style='
+  text-align:center;'><span lang=AR-IQ dir=RTL
+  style='font-size:14.0pt;
+  color:black;
+  '>قمح</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+
+
+<!-- table end here -->
+
+
+
+<h2 dir="rtl" style="padding: 10px;" align="justify">
+<span style="color: yellow;"><b>
+اضغط على زر الإعجاب للمزيد</b></span>
+</h2>
+
+ 
+ <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0" nonce="Pu2cWjr6"></script>
+
+  <div  align="center" class="fb-page" data-href="https://www.facebook.com/Fijjlacom-107975257611185/" data-tabs="" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+	  <blockquote cite="https://www.facebook.com/Fijjlacom-107975257611185/" class="fb-xfbml-parse-ignore">
+		<a href="https://www.facebook.com/Fijjlacom-107975257611185/">Fijjla.com</a>
+	  </blockquote>
+  </div>
+ 
+
+<!-- table end here -->
+
+</div>
+
+
+
+<script>
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+var substring3 = "en";
+
+output.innerHTML = slider.value *10 +' %';
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+function say(m) {
+
+	if(typeof speechSynthesis === 'undefined') {
+    return;
+  }
+
+  var list1 = document.getElementById("voiceSelect");
+  var msg = new SpeechSynthesisUtterance();
+  var voices = window.speechSynthesis.getVoices();
+   
+  msg.voice = voices[ Number(list1.value.substr(0, list1.value.indexOf('-')))   ];
+  msg.voiceURI = "native";
+  msg.volume = 1;
+  msg.rate = slider.value/10;
+  msg.pitch = 1;
+  msg.text = m;
+  msg.lang = 'en-US';
+  speechSynthesis.speak(msg);
+}
+
+slider.oninput = function() {
+  output.innerHTML = this.value *10 +' %';
+}
+
+function populateVoiceList() {
+  if(typeof speechSynthesis === 'undefined') {
+    return;
+  }
+  
+  var voices = speechSynthesis.getVoices();
+
+  document.getElementById("voiceSelect").innerHTML = '';
+  for(var i = 0; i < voices.length; i++) {
+  
+		if(voices[i].lang.indexOf(substring3) !== -1) {
+			var option = document.createElement('option');
+			option.textContent = i + '-' + voices[i].name + ' (' + voices[i].lang + ')';
+			
+
+			option.setAttribute('data-lang', voices[i].lang);
+			option.setAttribute('data-name', voices[i].name);
+			document.getElementById("voiceSelect").appendChild(option);
+		}
+  }
+}
+
+populateVoiceList();
+
+if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
+	speechSynthesis.onvoiceschanged = populateVoiceList;
+}
+
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126945561-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-126945561-4');
+</script>
+
+
+
+</body>
+</html>
