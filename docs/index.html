@@ -143,7 +143,7 @@ td, th, tr, p {
 }
 
 .collapsible:after {
-  content: "\2212";
+  content: "\002B";
   color: white;
   font-weight: bold;
   float: left;
@@ -151,12 +151,12 @@ td, th, tr, p {
 }
 
 .active:after {
-  content: '\002B';
+  content: '\2212';
 }
 
 .contentxy {
   //padding: 0 18px;
-  max-height: 5000px;
+  max-height: 0px;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: #002044;
@@ -868,15 +868,13 @@ for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
-    if (content.style.maxHeight == "0px"){
-      content.style.maxHeight = "5000px";
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
     } else {
-      content.style.maxHeight =   "0px";
+      content.style.maxHeight = content.scrollHeight + "px";
     } 
   });
 }
-
-
 </script>
 
 
